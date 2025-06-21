@@ -1,32 +1,174 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>The DressCode</title>
-    <style>
-        body { font-family: Arial; padding: 20px; }
-        nav a { margin: 10px; text-decoration: none; color: blue; }
-        section { margin-top: 50px; }
-        img { width: 150px; margin: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>The DressCode</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 8px 12px;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    section {
+      margin-top: 50px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #444;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to The DressCode</h1>
-    <nav>
-        <a href="#perfumes">Perfumes</a>
-        <a href="#dresses">Dresses</a>
-        <a href="#bags">Bags</a>
-        <a href="#corset">Corsets</a>
-        <a href="#lingerie">Lingerie</a>
-        <a href="#footwear">Footwear</a>
-    </nav>
+  <h1>Welcome to The DressCode</h1>
 
-    <section id="perfumes"><h2>Perfumes</h2><img src="images/perfumes/sample.jpg" alt="Perfume"></section>
-    <section id="dresses"><h2>Dresses</h2><img src="images/dresses/sample.jpg" alt="Dress"></section>
-    <section id="bags"><h2>Bags</h2><img src="images/bags/sample.jpg" alt="Bag"></section>
-    <section id="corset"><h2>Corset</h2><img src="images/corset/sample.jpg" alt="Corset"></section>
-    <section id="lingerie"><h2>Lingerie</h2><img src="images/lingerie/sample.jpg" alt="Lingerie"></section>
-    <section id="footwear"><h2>Footwear</h2><img src="images/footwear/sample.jpg" alt="Footwear"></section>
+  <nav>
+    <a href="#perfumes">Perfumes</a>
+    <a href="#dresses">Dresses</a>
+    <a href="#bags">Bags</a>
+    <a href="#corset">Corsets</a>
+    <a href="#lingerie">Lingerie</a>
+    <a href="#footwear">Footwear</a>
+  </nav>
+
+  <!-- Perfumes -->
+  <section id="perfumes">
+    <h2>Perfumes</h2>
+    <div class="gallery">
+      <img src="images/perfumes/InShot_20250620_191346444.jpg">
+      <img src="images/perfumes/InShot_20250620_192403897.jpg">
+      <img src="images/perfumes/InShot_20250620_194240281.jpg">
+      <img src="images/perfumes/InShot_20250620_200650690.jpg">
+      <img src="images/perfumes/InShot_20250621_203741156.jpg">
+    </div>
+  </section>
+
+  <!-- Dresses -->
+  <section id="dresses">
+    <h2>Dresses</h2>
+    <div class="gallery">
+      <img src="images/dresses/IMG-20250521-WA0121.jpg">
+      <img src="images/dresses/IMG-20250527-WA0134.jpg">
+      <img src="images/dresses/IMG-20250603-WA0152.jpg">
+      <img src="images/dresses/IMG-20250605-WA0071.jpg">
+      <img src="images/dresses/IMG-20250610-WA0180.jpg">
+      <img src="images/dresses/IMG-20250610-WA0195.jpg">
+      <img src="images/dresses/IMG-20250610-WA0203.jpg">
+      <img src="images/dresses/IMG-20250610-WA0204.jpg">
+      <img src="images/dresses/IMG-20250610-WA0228.jpg">
+      <img src="images/dresses/IMG-20250619-WA0022.jpg">
+      <img src="images/dresses/IMG-20250619-WA0023.jpg">
+      <img src="images/dresses/IMG-20250619-WA0024.jpg">
+      <img src="images/dresses/IMG-20250619-WA0025.jpg">
+      <img src="images/dresses/IMG-20250619-WA0049.jpg">
+    </div>
+  </section>
+
+  <!-- Bags -->
+  <section id="bags">
+    <h2>Bags</h2>
+    <div class="gallery">
+      <img src="images/bags/IMG-20250528-WA0150.jpg">
+      <img src="images/bags/IMG-20250529-WA0139.jpg">
+      <img src="images/bags/IMG-20250609-WA0081.jpg">
+      <img src="images/bags/IMG-20250609-WA0091.jpg">
+      <img src="images/bags/IMG-20250609-WA0092.jpg">
+      <img src="images/bags/IMG-20250612-WA0102.jpg">
+      <img src="images/bags/IMG-20250613-WA0076.jpg">
+      <img src="images/bags/IMG-20250613-WA0079.jpg">
+      <img src="images/bags/IMG-20250614-WA0009.jpg">
+      <img src="images/bags/Screenshot_20250529_122200_Instagram.jpg">
+    </div>
+  </section>
+
+  <!-- Corsets -->
+  <section id="corset">
+    <h2>Corsets</h2>
+    <div class="gallery">
+      <img src="images/corset/IMG-20250608-WA0035.jpg">
+      <img src="images/corset/IMG-20250608-WA0036.jpg">
+      <img src="images/corset/IMG-20250608-WA0044.jpg">
+      <img src="images/corset/IMG-20250608-WA0088.jpg">
+    </div>
+  </section>
+
+  <!-- Lingerie -->
+  <section id="lingerie">
+    <h2>Lingerie</h2>
+    <div class="gallery">
+      <img src="images/lingerie/IMG-20250608-WA0008.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0009.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0010.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0011.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0037.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0039.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0040.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0080.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0081.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0082.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0083.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0084.jpg">
+      <img src="images/lingerie/IMG-20250608-WA0085.jpg">
+    </div>
+  </section>
+
+  <!-- Footwear -->
+  <section id="footwear">
+    <h2>Footwear</h2>
+    <div class="gallery">
+      <img src="images/footwear/IMG-20250527-WA0029.jpg">
+      <img src="images/footwear/IMG-20250527-WA0030.jpg">
+      <img src="images/footwear/IMG-20250527-WA0031.jpg">
+      <img src="images/footwear/IMG-20250527-WA0033.jpg">
+      <img src="images/footwear/IMG-20250527-WA0034.jpg">
+      <img src="images/footwear/IMG-20250527-WA0035.jpg">
+      <img src="images/footwear/IMG-20250527-WA0036.jpg">
+      <img src="images/footwear/IMG-20250527-WA0038.jpg">
+      <img src="images/footwear/IMG-20250527-WA0039.jpg">
+      <img src="images/footwear/IMG-20250527-WA0040.jpg">
+      <img src="images/footwear/IMG-20250527-WA0043.jpg">
+      <img src="images/footwear/IMG-20250527-WA0044.jpg">
+      <img src="images/footwear/IMG-20250527-WA0045.jpg">
+      <img src="images/footwear/IMG-20250527-WA0046.jpg">
+      <img src="images/footwear/IMG-20250527-WA0047.jpg">
+      <img src="images/footwear/IMG-20250527-WA0050.jpg">
+      <img src="images/footwear/IMG-20250527-WA0064.jpg">
+      <img src="images/footwear/IMG-20250529-WA0045.jpg">
+      <img src="images/footwear/IMG-20250529-WA0046.jpg">
+      <img src="images/footwear/IMG-20250529-WA0100.jpg">
+      <img src="images/footwear/IMG-20250529-WA0112.jpg">
+      <img src="images/footwear/IMG-20250529-WA0114.jpg">
+      <img src="images/footwear/Screenshot_20250528_105916_WhatsAppBusiness.jpg">
+      <img src="images/footwear/Screenshot_20250528_105919_WhatsAppBusiness.jpg">
+    </div>
+  </section>
+
 </body>
 </html>
