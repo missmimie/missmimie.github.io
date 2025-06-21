@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,159 +7,166 @@
   <style>
     html {
       scroll-behavior: smooth;
-    }
+    }body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff8f2;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  text-align: center;
+}
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff8f2;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      text-align: center;
-    }
+header {
+  background-color: #b85c38;
+  padding: 25px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    header {
-      background-color: #b85c38;
-      padding: 25px;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin: 0;
-    }
+.tagline {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  font-style: italic;
+  color: #fbe3d3;
+}
 
-    .tagline {
-      font-size: 1.1rem;
-      margin-top: 8px;
-      font-style: italic;
-      color: #fbe3d3;
-    }
+nav {
+  background-color: #fce3d5;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    nav {
-      background-color: #fce3d5;
-      padding: 10px 0;
-    }
+nav a {
+  color: #b85c38;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
 
-    nav a {
-      color: #b85c38;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 1rem;
-    }
+nav a:hover {
+  background-color: #fff0e8;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-    .section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+.section h2 {
+  color: #b85c38;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
 
-    .section h2 {
-      color: #b85c38;
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+.btn {
+  background-color: #b85c38;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+  margin: 15px 8px;
+}
 
-    .btn {
-      background-color: #b85c38;
-      color: white;
-      padding: 12px 26px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
-      margin: 15px 8px;
-    }
+.btn:hover {
+  background-color: #a44d2e;
+}
 
-    .btn:hover {
-      background-color: #a44d2e;
-    }
+footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #888;
+  padding-bottom: 40px;
+}
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #888;
-      padding-bottom: 40px;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>The DressCode 👗</h1>
+    <h1>The DressCode</h1>
     <div class="tagline">Complete your look with The DressCode</div>
-  </header>
-
-  <nav>
+  </header>  <nav>
     <a href="#perfumes">Perfumes</a>
     <a href="#dresses">Dresses</a>
     <a href="#footwear">Footwear</a>
+    <a href="#sneakers">Sneakers</a>
+    <a href="#heels">Heels</a>
+    <a href="#corsets">Corsets</a>
     <a href="#lingerie">Lingerie</a>
-  </nav>
-
-  <div class="section" id="perfumes">
-    <h2>🧴 Perfumes</h2>
+    <a href="#bags">Bags</a>
+  </nav>  <div class="section" id="perfumes">
+    <h2>Perfumes</h2>
     <div class="gallery">
-      <img src="images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume 1">
-      <img src="images/perfumes/InShot_20250620_192403897.jpg" alt="Perfume 2">
-      <img src="images/perfumes/InShot_20250620_194240281.jpg" alt="Perfume 3">
-      <img src="images/perfumes/InShot_20250620_200650690.jpg" alt="Perfume 4">
-      <img src="images/perfumes/InShot_20250621_203741156.jpg" alt="Perfume 5">
+      <!-- Add perfume image tags here -->
     </div>
-  </div>
-
-  <div class="section" id="dresses">
-    <h2>👗 Dresses</h2>
+  </div>  <div class="section" id="dresses">
+    <h2>Dresses</h2>
     <div class="gallery">
-      <img src="images/dresses/dress1.jpg" alt="Dress 1">
-      <img src="images/dresses/dress2.jpg" alt="Dress 2">
+      <!-- Add dress image tags here -->
     </div>
-  </div>
-
-  <div class="section" id="footwear">
-    <h2>🥿 Footwear</h2>
+  </div>  <div class="section" id="footwear">
+    <h2>Footwear</h2>
     <div class="gallery">
-      <img src="images/footwear/shoe1.jpg" alt="Shoe 1">
-      <img src="images/footwear/shoe2.jpg" alt="Shoe 2">
+      <!-- Add footwear image tags here -->
     </div>
-  </div>
-
-  <div class="section" id="lingerie">
-    <h2>🩱 Lingerie</h2>
+  </div>  <div class="section" id="sneakers">
+    <h2>Sneakers</h2>
     <div class="gallery">
-      <img src="images/lingerie/lingerie1.jpg" alt="Lingerie 1">
-      <img src="images/lingerie/lingerie2.jpg" alt="Lingerie 2">
+      <!-- Add sneaker image tags here -->
     </div>
-  </div>
-
-  <div class="section">
+  </div>  <div class="section" id="heels">
+    <h2>Heels</h2>
+    <div class="gallery">
+      <!-- Add heel image tags here -->
+    </div>
+  </div>  <div class="section" id="corsets">
+    <h2>Corsets</h2>
+    <div class="gallery">
+      <!-- Add corset image tags here -->
+    </div>
+  </div>  <div class="section" id="lingerie">
+    <h2>Lingerie</h2>
+    <div class="gallery">
+      <!-- Add lingerie image tags here -->
+    </div>
+  </div>  <div class="section" id="bags">
+    <h2>Bags</h2>
+    <div class="gallery">
+      <!-- Add bag image tags here -->
+    </div>
+  </div>  <div class="section">
     <a class="btn" href="https://wa.me/233268381521" target="_blank">Order via WhatsApp</a>
     <a class="btn" href="https://www.instagram.com/thedresscode_bymarian?igsh=MWJraGlzNjZzM3hlcw==" target="_blank">Visit Instagram</a>
-  </div>
-
-  <footer>
+  </div>  <footer>
     &copy; 2025 The DressCode. All rights reserved.
   </footer>
 </body>
