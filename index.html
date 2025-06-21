@@ -32,22 +32,7 @@
     }
     section {
       padding: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .gallery img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
     footer {
       background-color: #111;
@@ -56,6 +41,26 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .category-card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 150px;
+      text-align: center;
+    }
+    .category-card a {
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -63,62 +68,21 @@
     <h1>The DressCode</h1>
     <p>Complete your look with The DressCode – your go-to for affordable style.</p>
   </header>  <nav>
-    <a href="#perfumes">Perfumes</a>
-    <a href="#dresses">Dresses</a>
-    <a href="#footwear">Footwear</a>
-    <a href="#corset">Corset</a>
-    <a href="#lingerie">Lingerie</a>
-    <a href="#bags">Bags</a>
-  </nav>  <section id="perfumes">
-    <h2>Perfumes</h2>
-    <div class="gallery">
-      <img src="images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume" />
-      <img src="images/perfumes/InShot_20250620_192403897.jpg" alt="Perfume" />
-      <img src="images/perfumes/InShot_20250620_194240281.jpg" alt="Perfume" />
-      <img src="images/perfumes/InShot_20250620_200650690.jpg" alt="Perfume" />
-      <img src="images/perfumes/InShot_20250621_203741156.jpg" alt="Perfume" />
-    </div>
-  </section>  <section id="dresses">
-    <h2>Dresses</h2>
-    <div class="gallery">
-      <img src="images/dresses/IMG-20250605-WA0071.jpg" alt="Dress" />
-      <img src="images/dresses/IMG-20250610-WA0180.jpg" alt="Dress" />
-      <img src="images/dresses/IMG-20250610-WA0195.jpg" alt="Dress" />
-      <img src="images/dresses/IMG-20250610-WA0203.jpg" alt="Dress" />
-      <img src="images/dresses/IMG-20250610-WA0204.jpg" alt="Dress" />
-    </div>
-  </section>  <section id="footwear">
-    <h2>Footwear</h2>
-    <div class="gallery">
-      <img src="images/footwear/IMG-20250527-WA0030.jpg" alt="Footwear" />
-      <img src="images/footwear/IMG-20250527-WA0033.jpg" alt="Footwear" />
-      <img src="images/footwear/IMG-20250527-WA0034.jpg" alt="Footwear" />
-      <img src="images/footwear/IMG-20250527-WA0040.jpg" alt="Footwear" />
-      <img src="images/footwear/IMG-20250529-WA0100.jpg" alt="Footwear" />
-    </div>
-  </section>  <section id="corset">
-    <h2>Corset</h2>
-    <div class="gallery">
-      <img src="images/corset/IMG-20250608-WA0035.jpg" alt="Corset" />
-      <img src="images/corset/IMG-20250608-WA0036.jpg" alt="Corset" />
-      <img src="images/corset/IMG-20250608-WA0044.jpg" alt="Corset" />
-      <img src="images/corset/IMG-20250608-WA0088.jpg" alt="Corset" />
-    </div>
-  </section>  <section id="lingerie">
-    <h2>Lingerie</h2>
-    <div class="gallery">
-      <img src="images/lingerie/IMG-20250608-WA0008.jpg" alt="Lingerie" />
-      <img src="images/lingerie/IMG-20250608-WA0037.jpg" alt="Lingerie" />
-      <img src="images/lingerie/IMG-20250608-WA0080.jpg" alt="Lingerie" />
-      <img src="images/lingerie/IMG-20250608-WA0083.jpg" alt="Lingerie" />
-    </div>
-  </section>  <section id="bags">
-    <h2>Bags</h2>
-    <div class="gallery">
-      <img src="images/bags/IMG-20250528-WA0150.jpg" alt="Bag" />
-      <img src="images/bags/IMG-20250529-WA0139.jpg" alt="Bag" />
-      <img src="images/bags/IMG-20250609-WA0081.jpg" alt="Bag" />
-      <img src="images/bags/IMG-20250612-WA0102.jpg" alt="Bag" />
+    <a href="perfumes.html">Perfumes</a>
+    <a href="dresses.html">Dresses</a>
+    <a href="footwear.html">Footwear</a>
+    <a href="corset.html">Corset</a>
+    <a href="lingerie.html">Lingerie</a>
+    <a href="bags.html">Bags</a>
+  </nav>  <section>
+    <h2>Shop by Category</h2>
+    <div class="categories">
+      <div class="category-card"><a href="perfumes.html">Perfumes</a></div>
+      <div class="category-card"><a href="dresses.html">Dresses</a></div>
+      <div class="category-card"><a href="footwear.html">Footwear</a></div>
+      <div class="category-card"><a href="corset.html">Corset</a></div>
+      <div class="category-card"><a href="lingerie.html">Lingerie</a></div>
+      <div class="category-card"><a href="bags.html">Bags</a></div>
     </div>
   </section>  <footer>
     <p>Follow us on <a href="https://www.instagram.com/thedresscode_bymarian" style="color: #ffcb05;">Instagram</a> or WhatsApp us: <a href="https://wa.me/233268381521" style="color: #ffcb05;">+233 268 381 521</a></p>
