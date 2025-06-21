@@ -4,14 +4,16 @@
   <title>The DressCode</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       padding: 20px;
-      background-color: #f9f9f9;
+      background: linear-gradient(to bottom, #fff0f5, #f9f9f9);
+      color: #333;
     }
     h1 {
       text-align: center;
       margin-bottom: 40px;
-      color: #333;
+      color: #d63384;
+      font-size: 36px;
     }
     nav {
       text-align: center;
@@ -20,32 +22,41 @@
     nav a {
       margin: 10px;
       padding: 10px 15px;
-      background-color: #007BFF;
+      background-color: #d63384;
       color: white;
       text-decoration: none;
       border-radius: 5px;
+      font-weight: bold;
     }
     nav a:hover {
-      background-color: #0056b3;
+      background-color: #a61e58;
     }
     section {
       margin-top: 50px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
     h2 {
       color: #444;
       margin-bottom: 20px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      text-align: center;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
     }
     .gallery img {
-      width: 100%;
+      width: 90%;
+      margin: 10px auto;
+      display: block;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      object-fit: cover;
-      height: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
     .social-buttons {
       text-align: center;
@@ -90,35 +101,30 @@
       <img src="images/dresses/IMG-20250521-WA0121.jpg">
       <img src="images/dresses/IMG-20250527-WA0134.jpg">
       <img src="images/dresses/IMG-20250603-WA0152.jpg">
-      <!-- add more here -->
     </div>
   </section>  <section id="bags">
     <h2>Bags</h2>
     <div class="gallery">
       <img src="images/bags/IMG-20250528-WA0150.jpg">
       <img src="images/bags/IMG-20250529-WA0139.jpg">
-      <!-- add more here -->
     </div>
   </section>  <section id="corset">
     <h2>Corsets</h2>
     <div class="gallery">
       <img src="images/corset/IMG-20250608-WA0035.jpg">
       <img src="images/corset/IMG-20250608-WA0036.jpg">
-      <!-- add more here -->
     </div>
   </section>  <section id="lingerie">
     <h2>Lingerie</h2>
     <div class="gallery">
       <img src="images/lingerie/IMG-20250608-WA0008.jpg">
       <img src="images/lingerie/IMG-20250608-WA0009.jpg">
-      <!-- add more here -->
     </div>
   </section>  <section id="footwear">
     <h2>Footwear</h2>
     <div class="gallery">
       <img src="images/footwear/IMG-20250527-WA0029.jpg">
       <img src="images/footwear/IMG-20250527-WA0030.jpg">
-      <!-- add more here -->
     </div>
   </section>  <div class="social-buttons">
     <a href="https://wa.me/233268381521" target="_blank">Chat on WhatsApp</a>
