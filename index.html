@@ -15,16 +15,33 @@
       text-align: center;
     }
 
-    h1 {
+    header {
+      background-color: #b85c38;
+      padding: 20px;
+      color: white;
+    }
+
+    header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .section h2 {
       color: #b85c38;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 1.1rem;
-      max-width: 600px;
       margin: 10px auto 30px;
+      max-width: 600px;
     }
 
     .gallery {
@@ -32,7 +49,6 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       margin: 30px auto;
-      max-width: 900px;
     }
 
     .gallery img {
@@ -56,19 +72,42 @@
     .btn:hover {
       background-color: #a44d2e;
     }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to The DressCode 👗</h1>
-  <p>Classy and affordable African print fashion made for every queen. Browse our latest looks and order directly through WhatsApp or Instagram.</p>
+  <header>
+    <h1>The DressCode 👗</h1>
+  </header>
 
-  <div class="gallery">
-    <img src="https://i.ibb.co/Lz6QM49/h.jpg" alt="Dress 1">
-    <img src="https://i.ibb.co/DDrVBSH/J.jpg" alt="Dress 2">
-    <img src="https://i.ibb.co/W4q9hCV/k.jpg" alt="Dress 3">
+  <div class="section">
+    <h2>About Us</h2>
+    <p>Welcome to The DressCode — where African print fashion meets elegance, affordability, and everyday confidence. Whether you're dressing for an event or a casual day out, our tailored pieces are made with love to celebrate your unique beauty.</p>
   </div>
 
-  <a class="btn" href="https://wa.me/233268381521" target="_blank">Order via WhatsApp</a>
-  <a class="btn" href="https://www.instagram.com/thedresscode_bymarian?igsh=MWJraGlzNjZzM3hlcw==" target="_blank">Visit Instagram</a>
+  <div class="section">
+    <h2>Our Latest Looks</h2>
+    <div class="gallery">
+      <img src="https://i.ibb.co/F4rbt3N/In-Shot-20250620-200650690.jpg" alt="Dress 1">
+      <img src="https://i.ibb.co/QFqCTDR/In-Shot-20250620-194240281.jpg" alt="Dress 2">
+      <img src="https://i.ibb.co/fzBRgJD/In-Shot-20250620-192403897.jpg" alt="Dress 3">
+      <img src="https://i.ibb.co/PZDm2fv/In-Shot-20250620-191346444.jpg" alt="Dress 4">
+      <img src="https://i.ibb.co/XZpy9mF/In-Shot-20250621-203741156.jpg" alt="Dress 5">
+    </div>
+  </div>
+
+  <div class="section">
+    <a class="btn" href="https://wa.me/233268381521" target="_blank">Order via WhatsApp</a>
+    <a class="btn" href="https://www.instagram.com/thedresscode_bymarian?igsh=MWJraGlzNjZzM3hlcw==" target="_blank">Visit Instagram</a>
+  </div>
+
+  <footer>
+    &copy; 2025 The DressCode. All rights reserved.
+  </footer>
 </body>
 </html>
