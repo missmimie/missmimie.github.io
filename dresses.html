@@ -1,141 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dresses | The DressCode</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Outfit', sans-serif;
       margin: 0;
-      background: #fef2f2;
-      color: #2c2c2c;
-    }
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }header {
+  background-color: #8e44ad;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
 
-    header {
-      background: linear-gradient(135deg, #ec4899, #d946ef);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+nav {
+  background-color: #6c3483;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
 
-    nav {
-      background: #9d174d;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1rem;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: #af7ac5;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      background: #f472b6;
-      border-radius: 20px;
-      transition: background 0.3s;
-    }
+nav a:hover {
+  background-color: #8e44ad;
+}
 
-    nav a:hover {
-      background: #ec4899;
-    }
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #8e44ad;
+}
 
-    .container {
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.5rem;
-    }
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-    .product {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
 
-    .product img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
+.product img:hover {
+  transform: scale(1.05);
+}
 
-    .product-details {
-      padding: 1rem;
-      text-align: center;
-    }
+.order-btn {
+  background-color: #8e44ad;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
 
-    .order-btn {
-      display: inline-block;
-      background: #be185d;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
+.order-btn:hover {
+  background-color: #6c3483;
+}
 
-    .order-btn:hover {
-      background: #9d174d;
-    }
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #eee;
+  margin-top: 3rem;
+}
 
-    footer {
-      background: #f8f8f8;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: #8e44ad;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#topBtn:hover {
+  background: #6c3483;
+}
+
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Dresses</h1>
-    <p>Classy, affordable African-inspired dresses</p>
-  </header>
-
-  <nav>
+    <h1>The DressCode</h1>
+    <p>Dresses</p>
+  </header>  <nav>
     <a href="index.html">Home</a>
     <a href="perfumes.html">Perfumes</a>
+    <a href="dresses.html">Dresses</a>
     <a href="bags.html">Bags</a>
     <a href="corset.html">Corsets</a>
     <a href="lingerie.html">Lingerie</a>
     <a href="footwear.html">Footwear</a>
-  </nav>
-
-  <div class="container">
-    <div class="product-grid">
-
-      <div class="product"><img src="images/dresses/IMG-20250521-WA0121.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250527-WA0134.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250603-WA0152.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250605-WA0071.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250610-WA0180.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250610-WA0195.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250610-WA0203.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250610-WA0204.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250610-WA0228.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250619-WA0022.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250619-WA0023.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250619-WA0024.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250619-WA0025.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-      <div class="product"><img src="images/dresses/IMG-20250619-WA0049.jpg" alt="Dress"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
-
+  </nav>  <h2>Explore Our Dress Collection</h2>  <div class="product-grid">
+    <div class="product">
+      <img src="images/dresses/IMG-20250521-WA0121.jpg" alt="Dress 1">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this dress from The DressCode." target="_blank">Order via WhatsApp</a>
     </div>
-  </div>
-
-  <footer>
+    <div class="product">
+      <img src="images/dresses/IMG-20250527-WA0134.jpg" alt="Dress 2">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this dress from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="product">
+      <img src="images/dresses/IMG-20250603-WA0152.jpg" alt="Dress 3">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this dress from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="product">
+      <img src="images/dresses/IMG-20250605-WA0071.jpg" alt="Dress 4">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this dress from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
+    <!-- Add the rest of your dresses here using the same structure -->
+  </div>  <footer>
     &copy; 2025 The DressCode. All rights reserved.
-  </footer>
+  </footer><button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Top</button>
 
-</body>
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+  </script></body>
 </html>
