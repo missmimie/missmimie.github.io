@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,117 +12,120 @@
       padding: 0;
       background-color: #fff;
       color: #333;
-    }header {
-  background-color: #8e44ad;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-}
+    }
 
-nav {
-  background-color: #6c3483;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-}
+    header {
+      background-color: #8e44ad;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  background-color: #af7ac5;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
+    nav {
+      background-color: #6c3483;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
 
-nav a:hover {
-  background-color: #8e44ad;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #af7ac5;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
 
-h2 {
-  text-align: center;
-  margin-top: 2rem;
-  color: #8e44ad;
-}
+    nav a:hover {
+      background-color: #8e44ad;
+    }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    h2 {
+      text-align: center;
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
 
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.product img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-.product img:hover {
-  transform: scale(1.05);
-}
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
 
-.order-btn {
-  background-color: #8e44ad;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
+    .product img:hover {
+      transform: scale(1.05);
+    }
 
-.order-btn:hover {
-  background-color: #6c3483;
-}
+    .order-btn {
+      background-color: #8e44ad;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
 
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #eee;
-  margin-top: 3rem;
-}
+    .order-btn:hover {
+      background-color: #6c3483;
+    }
 
-#topBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  background: #8e44ad;
-  color: white;
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 1000;
-}
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #eee;
+      margin-top: 3rem;
+    }
 
-#topBtn:hover {
-  background: #6c3483;
-}
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background: #8e44ad;
+      color: white;
+      border: none;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
 
+    #topBtn:hover {
+      background: #6c3483;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>The DressCode</h1>
     <p>Bags</p>
-  </header>  <nav>
+  </header>
+
+  <nav>
     <a href="index.html">Home</a>
     <a href="perfumes.html">Perfumes</a>
     <a href="dresses.html">Dresses</a>
@@ -129,7 +133,11 @@ footer {
     <a href="corset.html">Corsets</a>
     <a href="lingerie.html">Lingerie</a>
     <a href="footwear.html">Footwear</a>
-  </nav>  <h2>Explore Our Bag Collection</h2>  <div class="product-grid">
+  </nav>
+
+  <h2>Explore Our Bag Collection</h2>
+
+  <div class="product-grid">
     <div class="product">
       <img src="images/bags/IMG-20250528-WA0150.jpg" alt="Bag 1">
       <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode." target="_blank">Order via WhatsApp</a>
@@ -142,11 +150,14 @@ footer {
       <img src="images/bags/IMG-20250609-WA0081.jpg" alt="Bag 3">
       <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode." target="_blank">Order via WhatsApp</a>
     </div>
-    <!-- Add the rest of your bags using the same structure -->
-  </div>  <footer>
-    &copy; 2025 The DressCode. All rights reserved.
-  </footer><button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+    <!-- Add more bag items similarly -->
+  </div>
 
+  <footer>
+    &copy; 2025 The DressCode. All rights reserved.
+  </footer>
+
+  <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
   <script>
     const topBtn = document.getElementById("topBtn");
     window.onscroll = function () {
@@ -156,5 +167,6 @@ footer {
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  </script></body>
+  </script>
+</body>
 </html>
