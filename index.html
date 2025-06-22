@@ -16,6 +16,7 @@
       font-family: 'Outfit', sans-serif;
       background: #fff;
       color: #1f1f1f;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -58,6 +59,7 @@
       background: #8e44ad;
     }
 
+    /* Banner Slider */
     .banner {
       position: relative;
       width: 100%;
@@ -65,18 +67,24 @@
       overflow: hidden;
     }
 
-    .banner img {
+    .slides {
+      display: flex;
+      width: 200%;
+      animation: slide 10s infinite ease-in-out;
+    }
+
+    .slides img {
       width: 100%;
       height: 300px;
       object-fit: cover;
-      animation: slideBanner 20s infinite;
     }
 
-    @keyframes slideBanner {
-      0%, 20% {transform: translateX(0);}
-      25%, 45% {transform: translateX(-100%);}
-      50%, 70% {transform: translateX(-200%);}
-      75%, 100% {transform: translateX(0);}
+    @keyframes slide {
+      0% {transform: translateX(0);}
+      45% {transform: translateX(0);}
+      50% {transform: translateX(-100%);}
+      95% {transform: translateX(-100%);}
+      100% {transform: translateX(0);}
     }
 
     .banner-text {
@@ -87,9 +95,10 @@
       background: rgba(0,0,0,0.5);
       color: white;
       padding: 1rem 2rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       border-radius: 12px;
       animation: fadeIn 2s ease-in-out;
+      text-align: center;
     }
 
     @keyframes fadeIn {
@@ -109,6 +118,12 @@
       justify-content: center;
       gap: 1rem;
       margin-top: 1rem;
+      opacity: 0;
+      animation: fadeInLinks 2s ease 1s forwards;
+    }
+
+    @keyframes fadeInLinks {
+      to { opacity: 1; }
     }
 
     .product-links a {
@@ -118,11 +133,12 @@
       padding: 1rem 1.5rem;
       border-radius: 8px;
       font-weight: 600;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
     .product-links a:hover {
       background: #6c3483;
+      transform: scale(1.05);
     }
 
     .about, .contact {
@@ -176,14 +192,14 @@
         margin-top: 0.5rem;
       }
 
+      .banner-text {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+
       .product-links {
         flex-direction: column;
         align-items: stretch;
-      }
-
-      .banner-text {
-        font-size: 1rem;
-        text-align: center;
       }
     }
   </style>
@@ -205,10 +221,13 @@
     <a href="footwear.html">Footwear</a>
   </nav>
 
-  <!-- Banner Section -->
+  <!-- Sliding Banner Section -->
   <div class="banner">
-    <img src="images/banner.png" alt="Banner Image" />
-    <div class="banner-text">Complete your look — from head to toe 👠👗👜</div>
+    <div class="slides">
+      <img src="images/banner1.png" alt="Banner 1" />
+      <img src="images/banner2.png" alt="Banner 2" />
+    </div>
+    <div class="banner-text">Style that speaks — confidence from head to toe 💃✨</div>
   </div>
 
   <section class="products">
@@ -248,7 +267,6 @@
   <button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Top</button>
 
   <script>
-    // Show/hide scroll-to-top button
     const topBtn = document.getElementById("topBtn");
     window.onscroll = function () {
       topBtn.style.display = window.scrollY > 300 ? "block" : "none";
