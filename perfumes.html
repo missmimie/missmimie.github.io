@@ -1,34 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Perfumes – The DressCode</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="dresses.html">Dresses</a>
-    <a href="bags.html">Bags</a>
-    <a href="corset.html">Corsets</a>
-    <a href="lingerie.html">Lingerie</a>
-    <a href="footwear.html">Footwear</a>
-  </nav>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffafc;
+    color: #2c2c2c;
+  }
 
-  <section>
-    <h2>Perfumes</h2>
-    <div class="gallery">
-      <img src="images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume 1">
-      <img src="images/perfumes/InShot_20250620_192403897.jpg" alt="Perfume 2">
-      <img src="images/perfumes/InShot_20250620_194240281.jpg" alt="Perfume 3">
-      <img src="images/perfumes/InShot_20250620_200650690.jpg" alt="Perfume 4">
-      <img src="images/perfumes/InShot_20250621_203741156.jpg" alt="Perfume 5">
-    </div>
-  </section>
+  nav {
+    background: #7209b7;
+    padding: 0.8rem;
+    text-align: center;
+  }
 
-  <div class="social-buttons">
-    <a href="https://wa.me/233268381521" target="_blank">Chat on WhatsApp</a>
-    <a class="instagram" href="https://www.instagram.com/thedresscode_bymarian" target="_blank">Visit Instagram</a>
-  </div>
-</body>
-</html>
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+  }
+
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #7209b7;
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .social-buttons {
+    margin-top: 2rem;
+  }
+
+  .social-buttons a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    background: #7209b7;
+    color: white;
+    text-decoration: none;
+  }
+
+  .social-buttons a.instagram {
+    background: #e1306c;
+  }
+</style>
