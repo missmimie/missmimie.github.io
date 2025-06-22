@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Footwear | The DressCode</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -12,14 +12,14 @@
       background-color: #fff;
       color: #333;
     }header {
-  background-color: #a040a0;
+  background-color: #3f51b5; /* Unique color for Footwear */
   padding: 1rem;
   text-align: center;
   color: white;
 }
 
 nav {
-  background-color: #7d3c98;
+  background-color: #303f9f;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -32,19 +32,19 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  background-color: #bb8fce;
+  background-color: #5c6bc0;
   border-radius: 20px;
   transition: background-color 0.3s;
 }
 
 nav a:hover {
-  background-color: #6c3483;
+  background-color: #1a237e;
 }
 
 h2 {
   text-align: center;
   margin-top: 2rem;
-  color: #7d3c98;
+  color: #3f51b5;
 }
 
 .product-grid {
@@ -70,7 +70,7 @@ h2 {
 }
 
 .order-btn {
-  background-color: #a040a0;
+  background-color: #3f51b5;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -81,7 +81,7 @@ h2 {
 }
 
 .order-btn:hover {
-  background-color: #7d3c98;
+  background-color: #1a237e;
 }
 
 footer {
@@ -96,7 +96,7 @@ footer {
   bottom: 30px;
   right: 30px;
   display: none;
-  background: #a040a0;
+  background: #3f51b5;
   color: white;
   border: none;
   padding: 0.7rem 1rem;
@@ -107,7 +107,7 @@ footer {
 }
 
 #topBtn:hover {
-  background: #7d3c98;
+  background: #1a237e;
 }
 
   </style>
@@ -124,23 +124,29 @@ footer {
     <a href="corset.html">Corsets</a>
     <a href="lingerie.html">Lingerie</a>
     <a href="footwear.html">Footwear</a>
-  </nav>  <h2>Step Into Style – Footwear</h2>  <div class="product-grid">
-    <div class="product">
-      <img src="images/footwear/IMG-20250527-WA0033.jpg" alt="Footwear 1">
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this footwear from The DressCode: https://missmimie.github.io/images/footwear/IMG-20250527-WA0033.jpg" target="_blank">Order via WhatsApp</a>
-    </div>
-    <div class="product">
-      <img src="images/footwear/IMG-20250527-WA0040.jpg" alt="Footwear 2">
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this footwear from The DressCode: https://missmimie.github.io/images/footwear/IMG-20250527-WA0040.jpg" target="_blank">Order via WhatsApp</a>
-    </div>
-    <div class="product">
-      <img src="images/footwear/IMG-20250529-WA0045.jpg" alt="Footwear 3">
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this footwear from The DressCode: https://missmimie.github.io/images/footwear/IMG-20250529-WA0045.jpg" target="_blank">Order via WhatsApp</a>
-    </div>
-    <div class="product">
-      <img src="images/footwear/Screenshot_20250528_105916_WhatsAppBusiness.jpg" alt="Footwear 4">
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this footwear from The DressCode: https://missmimie.github.io/images/footwear/Screenshot_20250528_105916_WhatsAppBusiness.jpg" target="_blank">Order via WhatsApp</a>
-    </div>
+  </nav>  <h2>Stylish Footwear</h2>
+  <div class="product-grid">
+    <script>
+      const footwearImages = [
+        "IMG-20250527-WA0029.jpg", "IMG-20250527-WA0030.jpg", "IMG-20250527-WA0031.jpg",
+        "IMG-20250527-WA0033.jpg", "IMG-20250527-WA0034.jpg", "IMG-20250527-WA0035.jpg",
+        "IMG-20250527-WA0036.jpg", "IMG-20250527-WA0038.jpg", "IMG-20250527-WA0039.jpg",
+        "IMG-20250527-WA0040.jpg", "IMG-20250527-WA0043.jpg", "IMG-20250527-WA0044.jpg",
+        "IMG-20250527-WA0045.jpg", "IMG-20250527-WA0046.jpg", "IMG-20250527-WA0047.jpg",
+        "IMG-20250527-WA0050.jpg", "IMG-20250527-WA0064.jpg", "IMG-20250529-WA0045.jpg",
+        "IMG-20250529-WA0046.jpg", "IMG-20250529-WA0100.jpg", "IMG-20250529-WA0112.jpg",
+        "IMG-20250529-WA0114.jpg", "Screenshot_20250528_105916_WhatsAppBusiness.jpg",
+        "Screenshot_20250528_105919_WhatsAppBusiness.jpg"
+      ];
+      document.write(
+        footwearImages.map(name => `
+          <div class="product">
+            <img src="images/footwear/${name}" alt="Footwear">
+            <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this footwear from The DressCode: https://missmimie.github.io/images/footwear/${name}" target="_blank">Order via WhatsApp</a>
+          </div>
+        `).join('')
+      );
+    </script>
   </div>  <footer>
     &copy; 2025 The DressCode. All rights reserved.
   </footer><button id="topBtn" onclick="scrollToTop()">↑ Top</button>
