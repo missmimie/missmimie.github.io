@@ -1,277 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The DressCode | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Outfit', sans-serif;
-      background: #fff;
-      color: #1f1f1f;
-      scroll-behavior: smooth;
-    }
+      background: #fff8f4;
+      color: #333;
+    }header {
+  background-color: #e91e63;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #8e44ad;
-      padding: 1rem 2rem;
-      color: white;
-    }
+header img {
+  max-height: 80px;
+  margin-bottom: 1rem;
+}
 
-    header img {
-      height: 50px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
 
-    header h1 {
-      font-size: 1.8rem;
-    }
+.banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
 
-    nav {
-      background: #6c3483;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1rem;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #fff0f6;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      background: #af7ac5;
-      border-radius: 20px;
-      transition: background 0.3s;
-    }
+nav a {
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
 
-    nav a:hover {
-      background: #8e44ad;
-    }
+nav a.perfumes { background-color: #f4511e; }
+nav a.dresses { background-color: #6a1b9a; }
+nav a.bags { background-color: #00838f; }
+nav a.corset { background-color: #ad1457; }
+nav a.lingerie { background-color: #d81b60; }
+nav a.footwear { background-color: #5d4037; }
 
-    /* Banner Slider */
-    .banner {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
+nav a:hover {
+  opacity: 0.8;
+}
 
-    .slides {
-      display: flex;
-      width: 200%;
-      animation: slide 10s infinite ease-in-out;
-    }
+.about, .contact {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .slides img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
+.about h2, .contact h2 {
+  color: #e91e63;
+  margin-bottom: 1rem;
+}
 
-    @keyframes slide {
-      0% {transform: translateX(0);}
-      45% {transform: translateX(0);}
-      50% {transform: translateX(-100%);}
-      95% {transform: translateX(-100%);}
-      100% {transform: translateX(0);}
-    }
+footer {
+  background-color: #fce4ec;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
 
-    .banner-text {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.6rem;
-      border-radius: 12px;
-      animation: fadeIn 2s ease-in-out;
-      text-align: center;
-    }
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
 
-    @keyframes fadeIn {
-      0% {opacity: 0; transform: translate(-50%, -60%);}
-      100% {opacity: 1; transform: translate(-50%, -50%);}
-    }
+#topBtn:hover {
+  background: #c2185b;
+}
 
-    section {
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .product-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-      opacity: 0;
-      animation: fadeInLinks 2s ease 1s forwards;
-    }
-
-    @keyframes fadeInLinks {
-      to { opacity: 1; }
-    }
-
-    .product-links a {
-      text-decoration: none;
-      background: #8e44ad;
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .product-links a:hover {
-      background: #6c3483;
-      transform: scale(1.05);
-    }
-
-    .about, .contact {
-      background: #f4effa;
-      padding: 2rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .about h2, .contact h2 {
-      color: #8e44ad;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #eee;
-      margin-top: 3rem;
-    }
-
-    /* Scroll to Top Button */
-    #topBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      display: none;
-      background: #8e44ad;
-      color: white;
-      border: none;
-      padding: 0.7rem 1rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    #topBtn:hover {
-      background: #6c3483;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      header h1 {
-        font-size: 1.3rem;
-        margin-top: 0.5rem;
-      }
-
-      .banner-text {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-      }
-
-      .product-links {
-        flex-direction: column;
-        align-items: stretch;
-      }
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="images/logo.png" alt="The DressCode Logo" />
+    <img src="images/logo.png" alt="The DressCode Logo">
     <h1>The DressCode</h1>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="perfumes.html">Perfumes</a>
-    <a href="dresses.html">Dresses</a>
-    <a href="bags.html">Bags</a>
-    <a href="corset.html">Corsets</a>
-    <a href="lingerie.html">Lingerie</a>
-    <a href="footwear.html">Footwear</a>
-  </nav>
-
-  <!-- Sliding Banner Section -->
-  <div class="banner">
-    <div class="slides">
-      <img src="images/banner1.png" alt="Banner 1" />
-      <img src="images/banner2.png" alt="Banner 2" />
-    </div>
-    <div class="banner-text">Complete your look — from head to toe 💃✨</div>
-  </div>
-
-  <section class="products">
-    <h2 style="text-align:center; color:#8e44ad;">Shop By Category</h2>
-    <div class="product-links">
-      <a href="perfumes.html">Perfumes</a>
-      <a href="dresses.html">Dresses</a>
-      <a href="bags.html">Bags</a>
-      <a href="corset.html">Corsets</a>
-      <a href="lingerie.html">Lingerie</a>
-      <a href="footwear.html">Footwear</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about">
+    <p>Complete your look — from head to toe 👠👜💄</p>
+  </header>  <img src="images/banner1.png" alt="Main Banner" class="banner">  <nav>
+    <a href="perfumes.html" class="perfumes">Perfumes</a>
+    <a href="dresses.html" class="dresses">Dresses</a>
+    <a href="bags.html" class="bags">Bags</a>
+    <a href="corset.html" class="corset">Corsets</a>
+    <a href="lingerie.html" class="lingerie">Lingerie</a>
+    <a href="footwear.html" class="footwear">Footwear</a>
+  </nav>  <section class="about">
     <h2>About Us</h2>
-    <p>
-      Welcome to The DressCode — your one-stop destination for trendy, affordable, and stylish fashion items. 
-      Whether you're looking for elegant dresses, cozy lingerie, premium perfumes, stylish bags, or sleek footwear, we’ve got something for every taste. 
-      We pride ourselves on quality, convenience, and making you feel confident in what you wear.
-    </p>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>📱 WhatsApp: <a href="https://wa.me/233268381521" target="_blank">+233 268 381 521</a></p>
+    <p>The DressCode is your one-stop shop for stylish and affordable fashion essentials. From fragrances to footwear, we help you complete your look effortlessly. Every item is curated with love, trend, and you in mind.</p>
+  </section>  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📱 WhatsApp: <a href="https://wa.me/233268381521" target="_blank">+233 26 838 1521</a></p>
     <p>📸 Instagram: <a href="https://www.instagram.com/thedresscode_bymarian" target="_blank">@thedresscode_bymarian</a></p>
-  </section>
-
-  <footer>
+  </section>  <footer>
     &copy; 2025 The DressCode. All rights reserved.
-  </footer>
-
-  <!-- Scroll to Top Button -->
-  <button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Top</button>
+  </footer><button id="topBtn" onclick="scrollToTop()">↑ Top</button>
 
   <script>
     const topBtn = document.getElementById("topBtn");
     window.onscroll = function () {
       topBtn.style.display = window.scrollY > 300 ? "block" : "none";
     };
-  </script>
 
-</body>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script></body>
 </html>
