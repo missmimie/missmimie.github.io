@@ -22,9 +22,33 @@ header h1 {
   font-size: 2rem;
 }
 
+nav {
+  background-color: #ffe4d9;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f4511e;
+  font-weight: bold;
+  border: 2px solid #f4511e;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background: #f4511e;
+  color: white;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   padding: 2rem;
   max-width: 1200px;
@@ -43,7 +67,7 @@ header h1 {
 
 .item img {
   width: 100%;
-  height: 250px;
+  height: 280px;
   object-fit: cover;
   display: block;
 }
@@ -109,7 +133,15 @@ footer {
 <body>
   <header>
     <h1>Perfumes Collection</h1>
-  </header>  <main class="grid">
+  </header>  <nav>
+    <a href="index.html">Home</a>
+    <a href="perfumes.html">Perfumes</a>
+    <a href="dresses.html">Dresses</a>
+    <a href="bags.html">Bags</a>
+    <a href="corset.html">Corsets</a>
+    <a href="lingerie.html">Lingerie</a>
+    <a href="footwear.html">Footwear</a>
+  </nav>  <main class="grid">
     <div class="item">
       <img src="images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume 1">
       <button onclick="orderWhatsApp('images/perfumes/InShot_20250620_191346444.jpg')">Order via WhatsApp</button>
