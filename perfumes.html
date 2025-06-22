@@ -56,15 +56,37 @@ h2 {
   margin: 0 auto;
 }
 
-.product-grid img {
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s;
 }
 
-.product-grid img:hover {
+.product img:hover {
   transform: scale(1.05);
+}
+
+.order-btn {
+  background-color: #8e44ad;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #6c3483;
 }
 
 footer {
@@ -74,7 +96,6 @@ footer {
   margin-top: 3rem;
 }
 
-/* Scroll to Top Button */
 #topBtn {
   position: fixed;
   bottom: 30px;
@@ -96,7 +117,8 @@ footer {
 
   </style>
 </head>
-<body>  <header>
+<body>
+  <header>
     <h1>The DressCode</h1>
     <p>Perfumes</p>
   </header>  <nav>
@@ -108,14 +130,29 @@ footer {
     <a href="lingerie.html">Lingerie</a>
     <a href="footwear.html">Footwear</a>
   </nav>  <h2>Explore Our Perfume Collection</h2>  <div class="product-grid">
-    <img src="images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume 1">
-    <img src="images/perfumes/InShot_20250620_192403897.jpg" alt="Perfume 2">
-    <img src="images/perfumes/InShot_20250620_194240281.jpg" alt="Perfume 3">
-    <img src="images/perfumes/InShot_20250620_200650690.jpg" alt="Perfume 4">
-    <img src="images/perfumes/InShot_20250621_203741156.jpg" alt="Perfume 5">
+    <div class="product">
+      <img src="images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume 1">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="product">
+      <img src="images/perfumes/InShot_20250620_192403897.jpg" alt="Perfume 2">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="product">
+      <img src="images/perfumes/InShot_20250620_194240281.jpg" alt="Perfume 3">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="product">
+      <img src="images/perfumes/InShot_20250620_200650690.jpg" alt="Perfume 4">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
+    <div class="product">
+      <img src="images/perfumes/InShot_20250621_203741156.jpg" alt="Perfume 5">
+      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode." target="_blank">Order via WhatsApp</a>
+    </div>
   </div>  <footer>
     &copy; 2025 The DressCode. All rights reserved.
-  </footer>  <!-- Scroll to Top Button --><button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Top</button>
+  </footer><button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Top</button>
 
   <script>
     const topBtn = document.getElementById("topBtn");
