@@ -3,7 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfumes | The DressCode</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Outfit', sans-serif;
@@ -12,14 +12,14 @@
       background-color: #fff;
       color: #333;
     }header {
-  background-color: #a040a0;
+  background-color: #ff7043; /* Unique color for Perfumes */
   padding: 1rem;
   text-align: center;
   color: white;
 }
 
 nav {
-  background-color: #7d3c98;
+  background-color: #f4511e;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -32,19 +32,19 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  background-color: #bb8fce;
+  background-color: #ff7043;
   border-radius: 20px;
   transition: background-color 0.3s;
 }
 
 nav a:hover {
-  background-color: #6c3483;
+  background-color: #bf360c;
 }
 
 h2 {
   text-align: center;
   margin-top: 2rem;
-  color: #7d3c98;
+  color: #f4511e;
 }
 
 .product-grid {
@@ -70,7 +70,7 @@ h2 {
 }
 
 .order-btn {
-  background-color: #a040a0;
+  background-color: #f4511e;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -81,7 +81,7 @@ h2 {
 }
 
 .order-btn:hover {
-  background-color: #7d3c98;
+  background-color: #bf360c;
 }
 
 footer {
@@ -96,7 +96,7 @@ footer {
   bottom: 30px;
   right: 30px;
   display: none;
-  background: #a040a0;
+  background: #f4511e;
   color: white;
   border: none;
   padding: 0.7rem 1rem;
@@ -107,7 +107,7 @@ footer {
 }
 
 #topBtn:hover {
-  background: #7d3c98;
+  background: #bf360c;
 }
 
   </style>
@@ -124,30 +124,25 @@ footer {
     <a href="corset.html">Corsets</a>
     <a href="lingerie.html">Lingerie</a>
     <a href="footwear.html">Footwear</a>
-  </nav>  <h2>Scent Your Style – Explore Our Perfume Collection</h2>  <div class="product-grid">
-    <div class="product">
-      <img src="images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume 1" />
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode: https://missmimie.github.io/images/perfumes/InShot_20250620_191346444.jpg" target="_blank">Order via WhatsApp</a>
-    </div><div class="product">
-  <img src="images/perfumes/InShot_20250620_192403897.jpg" alt="Perfume 2" />
-  <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode: https://missmimie.github.io/images/perfumes/InShot_20250620_192403897.jpg" target="_blank">Order via WhatsApp</a>
-</div>
-
-<div class="product">
-  <img src="images/perfumes/InShot_20250620_194240281.jpg" alt="Perfume 3" />
-  <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode: https://missmimie.github.io/images/perfumes/InShot_20250620_194240281.jpg" target="_blank">Order via WhatsApp</a>
-</div>
-
-<div class="product">
-  <img src="images/perfumes/InShot_20250620_200650690.jpg" alt="Perfume 4" />
-  <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode: https://missmimie.github.io/images/perfumes/InShot_20250620_200650690.jpg" target="_blank">Order via WhatsApp</a>
-</div>
-
-<div class="product">
-  <img src="images/perfumes/InShot_20250621_203741156.jpg" alt="Perfume 5" />
-  <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode: https://missmimie.github.io/images/perfumes/InShot_20250621_203741156.jpg" target="_blank">Order via WhatsApp</a>
-</div>
-
+  </nav>  <h2>Fragrance Collection</h2>
+  <div class="product-grid">
+    <script>
+      const perfumeImages = [
+        "InShot_20250620_191346444.jpg",
+        "InShot_20250620_192403897.jpg",
+        "InShot_20250620_194240281.jpg",
+        "InShot_20250620_200650690.jpg",
+        "InShot_20250621_203741156.jpg"
+      ];
+      document.write(
+        perfumeImages.map(name => `
+          <div class="product">
+            <img src="images/perfumes/${name}" alt="Perfume">
+            <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this perfume from The DressCode: https://missmimie.github.io/images/perfumes/${name}" target="_blank">Order via WhatsApp</a>
+          </div>
+        `).join('')
+      );
+    </script>
   </div>  <footer>
     &copy; 2025 The DressCode. All rights reserved.
   </footer><button id="topBtn" onclick="scrollToTop()">↑ Top</button>
