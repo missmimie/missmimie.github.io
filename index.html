@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The DressCode | Complete Your Look</title>
   <style>
     body {
@@ -17,7 +17,6 @@
       color: white;
       padding: 3rem 1rem 2rem;
       text-align: center;
-      position: relative;
     }
 
     header img {
@@ -29,12 +28,23 @@
     header h1 {
       margin: 0;
       font-size: 2.8rem;
-      font-weight: bold;
     }
 
     header p {
-      margin-top: 0.5rem;
       font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .banner {
+      background: url('images/banner.jpg') no-repeat center center/cover;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 6px #000;
     }
 
     nav {
@@ -43,40 +53,45 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
-      padding: 1rem 0.5rem;
+      padding: 1rem;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 0.4rem 1rem;
+      padding: 0.5rem 1.2rem;
       background: #9d4edd;
       border-radius: 20px;
       transition: background 0.3s;
     }
 
     nav a:hover {
-      background: #ff5ca2;
+      background: #f72585;
     }
 
     section {
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
+    }
+
+    h2 {
+      color: #7209b7;
+      margin-bottom: 1rem;
     }
 
     .category-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
 
     .category-card {
       background: #fff0f6;
-      border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      border-radius: 12px;
       padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       transition: transform 0.3s;
     }
 
@@ -89,12 +104,22 @@
       color: #7209b7;
       font-weight: bold;
       font-size: 1.1rem;
-      display: block;
+    }
+
+    .about, .contact {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p, .contact p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     footer {
       background: #f8f8f8;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
       font-size: 0.9rem;
     }
@@ -115,11 +140,14 @@
   </style>
 </head>
 <body>
+
   <header>
-    <img src="images/logo.png" alt="The DressCode Logo">
+    <img src="images/logo.png" alt="The DressCode Logo" />
     <h1>The DressCode</h1>
     <p>Complete Your Look With Confidence & Style</p>
   </header>
+
+  <div class="banner">Trendy. Affordable. Elegant.</div>
 
   <nav>
     <a href="perfumes.html">Perfumes</a>
@@ -142,11 +170,21 @@
     </div>
   </section>
 
-  <footer>
+  <section class="about">
+    <h2>About Us</h2>
+    <p>The DressCode is your plug for trendy, affordable, and elegant fashion pieces — from heels to lingerie, perfumes to bags. We’re all about helping you complete your look effortlessly with classy items that speak style and confidence.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to place an order? Reach out to us!</p>
     <div class="social-buttons">
       <a href="https://wa.me/233268381521" target="_blank">Chat on WhatsApp</a>
       <a class="instagram" href="https://www.instagram.com/thedresscode_bymarian" target="_blank">Visit Instagram</a>
     </div>
+  </section>
+
+  <footer>
     &copy; 2025 The DressCode. All rights reserved.
   </footer>
 </body>
