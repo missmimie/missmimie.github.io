@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bags | The DressCode</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -12,14 +12,14 @@
       background-color: #fff;
       color: #333;
     }header {
-  background-color: #a040a0;
+  background-color: #00695c; /* Unique color for Bags */
   padding: 1rem;
   text-align: center;
   color: white;
 }
 
 nav {
-  background-color: #7d3c98;
+  background-color: #00796b;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -32,19 +32,19 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  background-color: #bb8fce;
+  background-color: #48a999;
   border-radius: 20px;
   transition: background-color 0.3s;
 }
 
 nav a:hover {
-  background-color: #6c3483;
+  background-color: #004d40;
 }
 
 h2 {
   text-align: center;
   margin-top: 2rem;
-  color: #7d3c98;
+  color: #00695c;
 }
 
 .product-grid {
@@ -70,7 +70,7 @@ h2 {
 }
 
 .order-btn {
-  background-color: #a040a0;
+  background-color: #00695c;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -81,7 +81,7 @@ h2 {
 }
 
 .order-btn:hover {
-  background-color: #7d3c98;
+  background-color: #004d40;
 }
 
 footer {
@@ -96,7 +96,7 @@ footer {
   bottom: 30px;
   right: 30px;
   display: none;
-  background: #a040a0;
+  background: #00695c;
   color: white;
   border: none;
   padding: 0.7rem 1rem;
@@ -107,7 +107,7 @@ footer {
 }
 
 #topBtn:hover {
-  background: #7d3c98;
+  background: #004d40;
 }
 
   </style>
@@ -124,20 +124,25 @@ footer {
     <a href="corset.html">Corsets</a>
     <a href="lingerie.html">Lingerie</a>
     <a href="footwear.html">Footwear</a>
-  </nav>  <h2>Carry Confidence – Shop Our Chic Bags</h2>  <div class="product-grid">
-    <div class="product">
-      <img src="images/bags/IMG-20250528-WA0150.jpg" alt="Bag 1">
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/IMG-20250528-WA0150.jpg" target="_blank">Order via WhatsApp</a>
-    </div>
-    <div class="product">
-      <img src="images/bags/IMG-20250529-WA0139.jpg" alt="Bag 2">
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/IMG-20250529-WA0139.jpg" target="_blank">Order via WhatsApp</a>
-    </div>
-    <div class="product">
-      <img src="images/bags/IMG-20250609-WA0081.jpg" alt="Bag 3">
-      <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/IMG-20250609-WA0081.jpg" target="_blank">Order via WhatsApp</a>
-    </div>
-    <!-- Add more products following the same format -->
+  </nav>  <h2>Chic Bags</h2>
+  <div class="product-grid">
+    <!-- Bags Images -->
+    <script>
+      const bagImages = [
+        "IMG-20250528-WA0150.jpg", "IMG-20250529-WA0139.jpg", "IMG-20250609-WA0081.jpg",
+        "IMG-20250609-WA0091.jpg", "IMG-20250609-WA0092.jpg", "IMG-20250612-WA0102.jpg",
+        "IMG-20250613-WA0076.jpg", "IMG-20250613-WA0079.jpg", "IMG-20250614-WA0009.jpg",
+        "Screenshot_20250529_122200_Instagram.jpg"
+      ];
+      document.write(
+        bagImages.map(name => `
+          <div class="product">
+            <img src="images/bags/${name}" alt="Bag">
+            <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/${name}" target="_blank">Order via WhatsApp</a>
+          </div>
+        `).join('')
+      );
+    </script>
   </div>  <footer>
     &copy; 2025 The DressCode. All rights reserved.
   </footer><button id="topBtn" onclick="scrollToTop()">↑ Top</button>
