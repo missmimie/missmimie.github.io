@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Footwear – The DressCode | Step In Style</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Footwear | The DressCode</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #ecfdf5;
+      color: #1c1c1c;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0d9488, #10b981);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #0f766e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background: #14b8a6;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #0d9488;
+    }
+
+    .container {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .order-btn {
+      display: inline-block;
+      background: #0d9488;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background: #065f46;
+    }
+
+    footer {
+      background: #f8f8f8;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    <h1>Footwear</h1>
+    <p>From casual to elegant – step out in style</p>
+  </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="perfumes.html">Perfumes</a>
@@ -15,25 +112,27 @@
     <a href="lingerie.html">Lingerie</a>
   </nav>
 
-  <section>
-    <h2>Footwear</h2>
-    <div class="gallery">
-      <figure><img src="images/footwear/IMG-20250527-WA0029.jpg" alt=""><figcaption>Red Block Heels</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0030.jpg" alt=""><figcaption>Clear Strap Sandals</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0031.jpg" alt=""><figcaption>Fluffy Slippers</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0033.jpg" alt=""><figcaption>Beige Heels</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0034.jpg" alt=""><figcaption>Chunky Sneakers</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0035.jpg" alt=""><figcaption>Formal Sandals</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0036.jpg" alt=""><figcaption>Everyday Flats</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0038.jpg" alt=""><figcaption>Elegant Heels</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0039.jpg" alt=""><figcaption>Basic Slippers</figcaption></figure>
-      <figure><img src="images/footwear/IMG-20250527-WA0040.jpg" alt=""><figcaption>Sporty Slides</figcaption></figure>
-    </div>
-  </section>
+  <div class="container">
+    <div class="product-grid">
 
-  <div class="social-buttons">
-    <a href="https://wa.me/233268381521" target="_blank">Chat on WhatsApp</a>
-    <a class="instagram" href="https://www.instagram.com/thedresscode_bymarian" target="_blank">Visit Instagram</a>
+      <!-- Replace only the file paths if necessary -->
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0029.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0030.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0031.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0033.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0034.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0035.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0036.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0038.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0039.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+      <div class="product"><img src="images/footwear/IMG-20250527-WA0040.jpg" alt="Footwear"><div class="product-details"><a class="order-btn" href="https://wa.me/233268381521">Order via WhatsApp</a></div></div>
+
+    </div>
   </div>
+
+  <footer>
+    &copy; 2025 The DressCode. All rights reserved.
+  </footer>
+
 </body>
 </html>
