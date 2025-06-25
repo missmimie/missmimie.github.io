@@ -72,8 +72,14 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .product-card {
@@ -155,6 +161,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="dresses.html">Dresses</a></li>
       <li><a href="sneakers.html">Sneakers</a></li>
+      <li><a href="perfumes.html">Perfumes</a></li>
       <li><a href="bags.html">Bags</a></li>
       <li><a href="lingerie.html">Lingerie</a></li>
       <li><a href="heels.html">Heels</a></li>
@@ -166,6 +173,7 @@
   <h2 class="section-title">Perfume Collection</h2>
   <div class="product-grid">
 
+    <!-- Perfume Cards -->
     <div class="product-card">
       <img src="https://missmimie.github.io/images/perfumes/InShot_20250620_191346444.jpg" alt="Perfume 1">
       <div class="product-info">
