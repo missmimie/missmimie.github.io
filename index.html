@@ -1,71 +1,300 @@
-<div class="product-grid">
-  <div class="product-card">
-    <div class="product-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
-      👠
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The DressCode - Premium Fashion & Lifestyle</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #fdf2ec, #fceee6);
+      color: #1a1a1a;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #d4af37, #e8358a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e8358a;
+    }
+
+    .hero {
+      background-image: url('https://missmimie.github.io/images/banner.png'); /* your uploaded banner */
+      background-size: cover;
+      background-position: center;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      padding: 0.75rem 2rem;
+      background: #e8358a;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #d02677;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 3rem 0 2rem;
+      color: #e8358a;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem 4rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 280px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .product-price {
+      color: #d4af37;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    .shop-button {
+      margin-top: 0.5rem;
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      background: #d4af37;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .shop-button:hover {
+      background: #b8912b;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      display: none;
+      background: #e8358a;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">The DressCode</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Define Your Style</h1>
+      <p>Where fashion meets confidence</p>
+      <a href="#products" class="cta-button">Shop Now</a>
     </div>
-    <div class="product-info">
-      <h3>Designer Heels</h3>
-      <p>Premium collection of elegant heels for every occasion</p>
-      <div class="product-price">From ₵89</div>
-      <a class="shop-button" href="heels.html">Shop Heels</a>
+  </section>
+
+  <h2 class="section-title" id="products">Our Collections</h2>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <div class="product-image" style="background-image: url('https://missmimie.github.io/images/sneakers/1_20250625_084402_0000.png');"></div>
+      <div class="product-info">
+        <h3>Luxury Sneakers</h3>
+        <p class="product-price">From ₵120</p>
+        <a href="sneakers.html" class="shop-button">Shop Sneakers</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image" style="background-image: url('https://missmimie.github.io/images/perfumes/InShot_20250620_191346444.jpg');"></div>
+      <div class="product-info">
+        <h3>Signature Perfumes</h3>
+        <p class="product-price">From ₵55</p>
+        <a href="perfumes.html" class="shop-button">Shop Perfumes</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image" style="background-image: url('https://missmimie.github.io/images/banner.png');"></div>
+      <div class="product-info">
+        <h3>Elegant Dresses</h3>
+        <p class="product-price">From ₵65</p>
+        <a href="dresses.html" class="shop-button">Shop Dresses</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image" style="background-color: #ffe9f3;"></div>
+      <div class="product-info">
+        <h3>Premium Lingerie</h3>
+        <p class="product-price">From ₵35</p>
+        <a href="lingerie.html" class="shop-button">Shop Lingerie</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image" style="background-color: #fff8ec;"></div>
+      <div class="product-info">
+        <h3>Designer Bags</h3>
+        <p class="product-price">From ₵95</p>
+        <a href="bags.html" class="shop-button">Shop Bags</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image" style="background-color: #f9f0f0;"></div>
+      <div class="product-info">
+        <h3>Elegant Heels</h3>
+        <p class="product-price">From ₵89</p>
+        <a href="heels.html" class="shop-button">Shop Heels</a>
+      </div>
     </div>
   </div>
 
-  <div class="product-card">
-    <div class="product-image" style="background-image: url('https://missmimie.github.io/images/sneakers/1_20250625_084402_0000.png'); background-size: cover; background-position: center;">
-    </div>
-    <div class="product-info">
-      <h3>Luxury Sneakers</h3>
-      <p>Comfort meets style in our exclusive sneaker collection</p>
-      <div class="product-price">From ₵120</div>
-      <a class="shop-button" href="sneakers.html">Shop Sneakers</a>
-    </div>
-  </div>
+  <footer id="contact">
+    &copy; 2025 The DressCode. All rights reserved.
+  </footer>
 
-  <div class="product-card">
-    <div class="product-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-      👗
-    </div>
-    <div class="product-info">
-      <h3>Elegant Dresses</h3>
-      <p>Stunning dresses for special moments and everyday elegance</p>
-      <div class="product-price">From ₵65</div>
-      <a class="shop-button" href="dresses.html">Shop Dresses</a>
-    </div>
-  </div>
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="scrollTopBtn">↑</button>
 
-  <div class="product-card">
-    <div class="product-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);">
-      💄
-    </div>
-    <div class="product-info">
-      <h3>Premium Lingerie</h3>
-      <p>Luxurious and comfortable intimate wear collection</p>
-      <div class="product-price">From ₵35</div>
-      <a class="shop-button" href="lingerie.html">Shop Lingerie</a>
-    </div>
-  </div>
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+  </script>
 
-  <div class="product-card">
-    <div class="product-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-      🎒
-    </div>
-    <div class="product-info">
-      <h3>Designer Bags</h3>
-      <p>Handcrafted bags that combine functionality with style</p>
-      <div class="product-price">From ₵95</div>
-      <a class="shop-button" href="bags.html">Shop Bags</a>
-    </div>
-  </div>
-
-  <div class="product-card">
-    <div class="product-image" style="background-image: url('https://missmimie.github.io/images/perfumes/InShot_20250620_191346444.jpg'); background-size: cover; background-position: center;">
-    </div>
-    <div class="product-info">
-      <h3>Signature Perfumes</h3>
-      <p>Captivating fragrances that define your unique essence</p>
-      <div class="product-price">From ₵55</div>
-      <a class="shop-button" href="perfumes.html">Shop Perfumes</a>
-    </div>
-  </div>
-</div>
+</body>
+</html>
