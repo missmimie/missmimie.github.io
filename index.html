@@ -1,140 +1,501 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The DressCode | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: #fff8f4;
-      color: #333;
-    }header {
-  background-color: #e91e63;
-  padding: 2rem;
-  text-align: center;
-  color: white;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DressCode - Premium Fashion & Lifestyle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header img {
-  max-height: 80px;
-  margin-bottom: 1rem;
-}
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #e8358a 0%, #f093fb 50%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.banner {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  display: block;
-}
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem;
-  background-color: #fff0f6;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
 
-nav a {
-  padding: 0.6rem 1rem;
-  font-weight: bold;
-  border-radius: 20px;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-}
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e8358a, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-nav a.perfumes { background-color: #f4511e; }
-nav a.dresses { background-color: #6a1b9a; }
-nav a.bags { background-color: #00838f; }
-nav a.corset { background-color: #ad1457; }
-nav a.lingerie { background-color: #d81b60; }
-nav a.footwear { background-color: #5d4037; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-nav a:hover {
-  opacity: 0.8;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-.about, .contact {
-  padding: 3rem 1.5rem;
-  text-align: center;
-  max-width: 900px;
-  margin: auto;
-}
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #e8358a, #f093fb);
+            transition: width 0.3s ease;
+        }
 
-.about h2, .contact h2 {
-  color: #e91e63;
-  margin-bottom: 1rem;
-}
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-footer {
-  background-color: #fce4ec;
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-}
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
 
-#topBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  background: #e91e63;
-  color: white;
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 1000;
-}
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
 
-#topBtn:hover {
-  background: #c2185b;
-}
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
 
-  </style>
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            background: white;
+            color: #e8358a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Products Section */
+        .products {
+            background: white;
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #e8358a, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 250px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image::before {
+            transform: translateX(100%);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #e8358a;
+        }
+
+        .shop-button {
+            background: linear-gradient(135deg, #e8358a, #f093fb);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .shop-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(232, 53, 138, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #f093fb;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #f093fb;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(4) { animation-delay: 0.4s; }
+        .product-card:nth-child(5) { animation-delay: 0.5s; }
+        .product-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="The DressCode Logo">
-    <h1>The DressCode</h1>
-    <p>Complete your look — from head to toe 👠👜💄</p>
-  </header>  <img src="images/banner1.png" alt="Main Banner" class="banner">  <nav>
-    <a href="perfumes.html" class="perfumes">Perfumes</a>
-    <a href="dresses.html" class="dresses">Dresses</a>
-    <a href="bags.html" class="bags">Bags</a>
-    <a href="corset.html" class="corset">Corsets</a>
-    <a href="lingerie.html" class="lingerie">Lingerie</a>
-    <a href="footwear.html" class="footwear">Footwear</a>
-  </nav>  <section class="about">
-    <h2>About Us</h2>
-    <p>The DressCode is your one-stop shop for stylish and affordable fashion essentials. From fragrances to footwear, we help you complete your look effortlessly. Every item is curated with love, trend, and you in mind.</p>
-  </section>  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>📱 WhatsApp: <a href="https://wa.me/233268381521" target="_blank">+233 26 838 1521</a></p>
-    <p>📸 Instagram: <a href="https://www.instagram.com/thedresscode_bymarian" target="_blank">@thedresscode_bymarian</a></p>
-  </section>  <footer>
-    &copy; 2025 The DressCode. All rights reserved.
-  </footer><button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+    <header>
+        <nav class="container">
+            <div class="logo">The DressCode</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <script>
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = function () {
-      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Define Your Style</h1>
+            <p>Where fashion meets confidence - Premium collection for the modern you</p>
+            <a href="#products" class="cta-button">Shop Collection</a>
+        </div>
+    </section>
 
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script></body>
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                        👠
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Heels</h3>
+                        <p>Premium collection of elegant heels for every occasion</p>
+                        <div class="product-price">From ₵89</div>
+                        <button class="shop-button" onclick="showCategory('heels')">Shop Heels</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); background-image: url('https://missmimie.github.io/images/sneakers/1_20250625_084402_0000.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Sneakers</h3>
+                        <p>Comfort meets style in our exclusive sneaker collection</p>
+                        <div class="product-price">From ₵120</div>
+                        <button class="shop-button" onclick="showCategory('sneakers')">Shop Sneakers</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        👗
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegant Dresses</h3>
+                        <p>Stunning dresses for special moments and everyday elegance</p>
+                        <div class="product-price">From ₵65</div>
+                        <button class="shop-button" onclick="showCategory('dresses')">Shop Dresses</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);">
+                        💄
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Lingerie</h3>
+                        <p>Luxurious and comfortable intimate wear collection</p>
+                        <div class="product-price">From ₵35</div>
+                        <button class="shop-button" onclick="showCategory('lingerie')">Shop Lingerie</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        🎒
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Bags</h3>
+                        <p>Handcrafted bags that combine functionality with style</p>
+                        <div class="product-price">From ₵95</div>
+                        <button class="shop-button" onclick="showCategory('bags')">Shop Bags</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); background-image: url('https://missmimie.github.io/images/perfumes/InShot_20250620_191346444.jpg'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="product-info">
+                        <h3>Signature Perfumes</h3>
+                        <p>Captivating fragrances that define your unique essence</p>
+                        <div class="product-price">From ₵55</div>
+                        <button class="shop-button" onclick="showCategory('perfumes')">Shop Perfumes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The DressCode. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Product category function (you can expand this)
+        function showCategory(category) {
+            alert(`Showing ${category} collection! You can integrate this with your product pages.`);
+            // Here you would typically redirect to category pages or filter products
+        }
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all product cards
+        document.querySelectorAll('.product-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
 </html>
