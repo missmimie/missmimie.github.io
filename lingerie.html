@@ -3,150 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lingerie – The DressCode</title>
+  <title>Lingerie - The DressCode</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff6f9;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #ff80ab;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 1rem;
-      background-color: #ffe4ed;
-    }
-
-    nav a {
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 20px;
-      background-color: white;
-      color: #ff4081;
-      font-weight: bold;
-      border: 1px solid #ff4081;
-      transition: 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #ff4081;
-      color: white;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      padding: 20px;
-    }
-
-    .product-item {
-      background-color: #fff0f5;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 0 10px rgba(255, 128, 171, 0.2);
-    }
-
-    .product-item img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    .whatsapp-button {
-      display: block;
-      margin-top: 8px;
-      background-color: #25D366;
-      color: white;
-      padding: 8px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    .scroll-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #ff4081;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: none;
-    }
-  </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <h1>The DressCode – Lingerie</h1>
+    <nav>
+      <div class="logo">The DressCode</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bags.html">Bags</a></li>
+        <li><a href="corset.html">Corsets</a></li>
+        <li><a href="dresses.html">Dresses</a></li>
+        <li><a href="fabrics.html">Fabrics</a></li>
+        <li><a href="lingerie.html">Lingerie</a></li>
+        <li><a href="perfumes.html">Perfumes</a></li>
+        <li><a href="sash.html">Sash</a></li>
+        <li><a href="shoes.html">Shoes</a></li>
+        <li><a href="slippers.html">Slippers</a></li>
+        <li><a href="sneakers.html">Sneakers</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="bags.html">Bags</a>
-    <a href="corset.html">Corset</a>
-    <a href="dresses.html">Dresses</a>
-    <a href="fabrics.html">Fabrics</a>
-    <a href="lingerie.html">Lingerie</a>
-    <a href="perfumes.html">Perfumes</a>
-    <a href="sash.html">Sash</a>
-    <a href="shoes.html">Shoes</a>
-    <a href="slippers.html">Slippers</a>
-    <a href="sneakers.html">Sneakers</a>
-  </nav>
+  <!-- Spacer -->
+  <div style="height: 80px;"></div>
 
-  <section class="product-grid">
-    <!-- Add all lingerie images -->
-    <!-- Sample below, repeat for all 17 images -->
-    <div class="product-item">
-      <img src="images/lingerie/1_20250625_121143_0000.png" alt="Lingerie" />
-      <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/1_20250625_121143_0000.png" target="_blank">Order via WhatsApp</a>
+  <!-- Lingerie Section -->
+  <section class="products-section">
+    <h2 class="section-title">Lingerie Collection</h2>
+    <div class="product-grid">
+
+      <!-- Lingerie Images -->
+      <div class="product-item"><img src="images/lingerie/1_20250625_121143_0000.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/2_20250625_121143_0001.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/3_20250625_121143_0002.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/5_20250625_121143_0004.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/6_20250625_121143_0005.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/7_20250625_121143_0006.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/8_20250625_121143_0007.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/9_20250625_121143_0008.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/10_20250625_121143_0009.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/11_20250625_121143_0010.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/12_20250625_121143_0011.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/13_20250625_121143_0012.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/14_20250625_121143_0013.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/15_20250625_121144_0014.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/16_20250625_121144_0015.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/17_20250625_121144_0016.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+      <div class="product-item"><img src="images/lingerie/18_20250625_121144_0017.png" alt="Lingerie"><a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie from The DressCode: https://missmimie.github.io/lingerie.html" target="_blank">Order via WhatsApp</a></div>
+
     </div>
-
-    <div class="product-item">
-      <img src="images/lingerie/2_20250625_121143_0001.png" alt="Lingerie" />
-      <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/2_20250625_121143_0001.png" target="_blank">Order via WhatsApp</a>
-    </div>
-
-    <div class="product-item">
-      <img src="images/lingerie/3_20250625_121143_0002.png" alt="Lingerie" />
-      <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/3_20250625_121143_0002.png" target="_blank">Order via WhatsApp</a>
-    </div>
-
-    <!-- Repeat for all remaining lingerie images in the same pattern -->
   </section>
 
-  <button onclick="scrollToTop()" class="scroll-top" id="scrollBtn">↑</button>
-
-  <script>
-    const scrollBtn = document.getElementById("scrollBtn");
-    window.addEventListener("scroll", () => {
-      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  </script>
+  <!-- Scroll to Top Button -->
+  <div class="scroll-to-top" id="scrollToTopBtn">&#8679;</div>
 
 </body>
 </html>
