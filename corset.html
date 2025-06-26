@@ -3,165 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Corsets - The DressCode</title>
+  <title>Corset - The DressCode</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background-color: #fffaf4;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #b88b4a;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-      flex-wrap: wrap;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-    nav a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-
-    .product-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .product-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .order-btn {
-      margin-top: 0.5rem;
-      background-color: #b88b4a;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-
-    .order-btn:hover {
-      background-color: #a17436;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #f4e9dd;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .scroll-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #b88b4a;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-    }
-
-    .scroll-to-top.show {
-      display: block;
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
-<body>
-
+<body class="corset-page">
   <header>
-    <h1>The DressCode</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="bags.html">Bags</a>
-      <a href="dresses.html">Dresses</a>
-      <a href="corset.html">Corsets</a>
-      <a href="lingerie.html">Lingerie</a>
-      <a href="perfumes.html">Perfumes</a>
-      <a href="shoes.html">Shoes</a>
-      <a href="slippers.html">Slippers</a>
-      <a href="sneakers.html">Sneakers</a>
-      <a href="fabrics.html">Fabrics</a>
+      <div class="logo"><a href="index.html">The DressCode</a></div>
+      <ul class="nav-links">
+        <li><a href="bags.html">Bags</a></li>
+        <li><a href="corset.html" class="active">Corset</a></li>
+        <li><a href="dresses.html">Dresses</a></li>
+        <li><a href="fabrics.html">Fabrics</a></li>
+        <li><a href="lingerie.html">Lingerie</a></li>
+        <li><a href="perfumes.html">Perfumes</a></li>
+        <li><a href="sash.html">Sash</a></li>
+        <li><a href="shoes.html">Shoes</a></li>
+        <li><a href="slippers.html">Slippers</a></li>
+        <li><a href="sneakers.html">Sneakers</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="product-grid">
-    <script>
-      const corsetImages = [
-        "IMG-20250608-WA0017.jpg",
-        "IMG-20250608-WA0035.jpg",
-        "IMG-20250608-WA0036.jpg",
-        "IMG-20250608-WA0088.jpg"
-      ];
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const container = document.querySelector(".product-grid");
-        corsetImages.forEach((img) => {
-          const card = document.createElement("div");
-          card.className = "product-card";
-          card.innerHTML = `
-            <img src="images/corset/${img}" alt="Corset product">
-            <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this corset from The DressCode: https://missmimie.github.io/images/corset/${img}" target="_blank">Order via WhatsApp</a>
-          `;
-          container.appendChild(card);
-        });
-      });
-    </script>
-  </section>
+  <main>
+    <h1>Corset Collection</h1>
+    <div class="product-grid">
+      <!-- Corset Images -->
+      <div class="product-item">
+        <img src="images/corset/IMG-20250608-WA0017.jpg" alt="Corset 1">
+        <a href="https://wa.me/233268381521?text=Hi! I'm interested in this corset: https://missmimie.github.io/images/corset/IMG-20250608-WA0017.jpg" target="_blank" class="order-btn">Order via WhatsApp</a>
+      </div>
+      <div class="product-item">
+        <img src="images/corset/IMG-20250608-WA0035.jpg" alt="Corset 2">
+        <a href="https://wa.me/233268381521?text=Hi! I'm interested in this corset: https://missmimie.github.io/images/corset/IMG-20250608-WA0035.jpg" target="_blank" class="order-btn">Order via WhatsApp</a>
+      </div>
+      <div class="product-item">
+        <img src="images/corset/IMG-20250608-WA0036.jpg" alt="Corset 3">
+        <a href="https://wa.me/233268381521?text=Hi! I'm interested in this corset: https://missmimie.github.io/images/corset/IMG-20250608-WA0036.jpg" target="_blank" class="order-btn">Order via WhatsApp</a>
+      </div>
+      <div class="product-item">
+        <img src="images/corset/IMG-20250608-WA0088.jpg" alt="Corset 4">
+        <a href="https://wa.me/233268381521?text=Hi! I'm interested in this corset: https://missmimie.github.io/images/corset/IMG-20250608-WA0088.jpg" target="_blank" class="order-btn">Order via WhatsApp</a>
+      </div>
+    </div>
+  </main>
 
   <footer>
-    Follow us on 
-    <a href="https://www.instagram.com/thedresscode_bymarian?igsh=MWJraGlzNjZzM3hlcw==" target="_blank">Instagram</a><br>
-    &copy; 2025 The DressCode. All rights reserved.
+    <p>Follow us on <a href="https://www.instagram.com/thedresscode_bymarian?igsh=MWJraGlzNjZzM3hlcw==" target="_blank">Instagram</a></p>
+    <p>&copy; 2025 The DressCode. All rights reserved.</p>
   </footer>
 
-  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
-
-  <script>
-    const scrollBtn = document.querySelector(".scroll-to-top");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) scrollBtn.classList.add("show");
-      else scrollBtn.classList.remove("show");
-    });
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  </script>
-
+  <button id="scrollTopBtn" title="Go to top">⬆️</button>
 </body>
 </html>
