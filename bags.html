@@ -1,163 +1,69 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bags | The DressCode</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
-  <style>
-    body {
-      background-color: #fff7f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }header {
-  background-color: #fce8dc;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #9a342d;
-}
-
-nav a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: #9a342d;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  text-decoration: underline;
-  font-weight: bold;
-  color: #7a241e;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.product {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-}
-
-.product img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.product a {
-  background-color: #9a342d;
-  color: white;
-  text-align: center;
-  padding: 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.product a:hover {
-  background-color: #7a241e;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #fce8dc;
-  margin-top: 2rem;
-}
-
-.scroll-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #9a342d;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-}
-
-  </style>
-</head><body>
+  <!-- Header -->
   <header>
-    <h1>The DressCode</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="perfumes.html">Perfumes</a>
-      <a href="bags.html" class="active">Bags</a>
-      <a href="corset.html">Corsets</a>
-      <a href="dresses.html">Dresses</a>
-      <a href="fabrics.html">Fabrics</a>
-      <a href="lingerie.html">Lingerie</a>
-      <a href="sash.html">Sashes</a>
-      <a href="shoes.html">Shoes</a>
-      <a href="slippers.html">Slippers</a>
-      <a href="sneakers.html">Sneakers</a>
-    </nav>
-  </header>  <main class="grid">
-    <!-- BAG IMAGES -->
-    <script>
-      const images = [
-        "10_20250625_133302_0009.png",
-        "12_20250625_133302_0011.png",
-        "16_20250625_133303_0015.png",
-        "24_20250625_133303_0023.png",
-        "25_20250625_133303_0024.png",
-        "29_20250625_133303_0028.png",
-        "30_20250625_133304_0029.png",
-        "31_20250625_133304_0030.png",
-        "32_20250625_133304_0031.png",
-        "36_20250625_133304_0035.png",
-        "37_20250625_133304_0036.png",
-        "46_20250625_133305_0045.png",
-        "48_20250625_133306_0047.png",
-        "50_20250625_133306_0049.png",
-        "5_20250625_133302_0004.png",
-        "6_20250625_133302_0005.png",
-        "7_20250625_133302_0006.png",
-        "8_20250625_133302_0007.png"
-      ];images.forEach((img) => {
-    document.write(`
-      <div class="product">
-        <img src="images/bags/${img}" alt="Bag" />
-        <a href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/${img}" target="_blank">Order via WhatsApp</a>
+      <div class="logo">The DressCode</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="contact-info">
+        <a href="https://wa.me/233268381521" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.instagram.com/thedresscode_bymarian" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
       </div>
-    `);
-  });
-</script>
+      <div class="mobile-menu"><span></span><span></span><span></span></div>
+    </nav>
+  </header>
 
-  </main><button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+  <!-- Product Category Hero -->
+  <section class="hero" style="height: 60vh;">
+    <div class="hero-content">
+      <h1>Bags Collection</h1>
+      <p>Stylish handbags, purses, and accessories for every occasion</p>
+    </div>
+  </section>
 
+  <!-- Product Grid -->
+  <section class="product-grid">
+    <!-- BAG PRODUCTS -->
+    <div class="product-item"><img src="images/bags/10_20250625_133302_0009.png" alt="Bag 1"><h3>Bag 1</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%201" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/12_20250625_133302_0011.png" alt="Bag 2"><h3>Bag 2</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%202" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/16_20250625_133303_0015.png" alt="Bag 3"><h3>Bag 3</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%203" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/24_20250625_133303_0023.png" alt="Bag 4"><h3>Bag 4</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%204" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/25_20250625_133303_0024.png" alt="Bag 5"><h3>Bag 5</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%205" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/29_20250625_133303_0028.png" alt="Bag 6"><h3>Bag 6</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%206" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/30_20250625_133304_0029.png" alt="Bag 7"><h3>Bag 7</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%207" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/31_20250625_133304_0030.png" alt="Bag 8"><h3>Bag 8</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%208" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/32_20250625_133304_0031.png" alt="Bag 9"><h3>Bag 9</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%209" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/36_20250625_133304_0035.png" alt="Bag 10"><h3>Bag 10</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2010" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/37_20250625_133304_0036.png" alt="Bag 11"><h3>Bag 11</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2011" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/46_20250625_133305_0045.png" alt="Bag 12"><h3>Bag 12</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2012" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/48_20250625_133306_0047.png" alt="Bag 13"><h3>Bag 13</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2013" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/50_20250625_133306_0049.png" alt="Bag 14"><h3>Bag 14</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2014" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/5_20250625_133302_0004.png" alt="Bag 15"><h3>Bag 15</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2015" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/6_20250625_133302_0005.png" alt="Bag 16"><h3>Bag 16</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2016" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/7_20250625_133302_0006.png" alt="Bag 17"><h3>Bag 17</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2017" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item"><img src="images/bags/8_20250625_133302_0007.png" alt="Bag 18"><h3>Bag 18</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Bag%2018" target="_blank">Order via WhatsApp</a></div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 The DressCode. All rights reserved.</p>
-    <p>Follow us on <a href="https://www.instagram.com/thedresscode_bymarian" target="_blank">Instagram</a></p>
-  </footer>  <script>
-    // Scroll-to-top button toggle
-    window.addEventListener("scroll", () => {
-      document.querySelector(".scroll-top").style.display =
-        window.scrollY > 100 ? "block" : "none";
-    });
-  </script></body></html>
+    <p>&copy; 2025 The DressCode. All rights reserved. | Crafted with ❤️ for fashion lovers</p>
+  </footer>
+
+  <div class="scroll-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})"><i class="fas fa-chevron-up"></i></div>
+  <script src="script.js"></script>
+</body>
+</html>
