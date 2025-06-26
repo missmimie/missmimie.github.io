@@ -3,63 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lingerie - The DressCode</title>
+  <title>Lingerie – The DressCode</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff6f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff80ab;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #ffe4ed;
+      gap: 10px;
+      padding: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 20px;
+      background-color: white;
+      color: #ff4081;
+      font-weight: bold;
+      border: 1px solid #ff4081;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .product-item {
+      background-color: #fff0f5;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 128, 171, 0.2);
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">The DressCode</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="perfumes.html">Perfumes</a></li>
-        <li><a href="dresses.html">Dresses</a></li>
-        <li><a href="bags.html">Bags</a></li>
-        <li><a href="corset.html">Corset</a></li>
-        <li><a href="lingerie.html" class="active">Lingerie</a></li>
-        <li><a href="shoes.html">Shoes</a></li>
-        <li><a href="slippers.html">Slippers</a></li>
-        <li><a href="sneakers.html">Sneakers</a></li>
-        <li><a href="sash.html">Sash</a></li>
-        <li><a href="fabrics.html">Fabrics</a></li>
-      </ul>
-    </nav>
+
+  <header>
+    <h1>The DressCode – Lingerie</h1>
   </header>
 
-  <main class="product-page">
-    <h1>Lingerie Collection</h1>
-    <div class="product-grid">
-      <!-- LINGERIE IMAGES -->
-      <!-- Replace each of these with correct paths -->
-      <div class="product-card"><img src="images/lingerie/10_20250625_121143_0009.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/10_20250625_121143_0009.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/11_20250625_121143_0010.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/11_20250625_121143_0010.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/12_20250625_121143_0011.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/12_20250625_121143_0011.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/13_20250625_121143_0012.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/13_20250625_121143_0012.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/14_20250625_121143_0013.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/14_20250625_121143_0013.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/15_20250625_121144_0014.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/15_20250625_121144_0014.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/16_20250625_121144_0015.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/16_20250625_121144_0015.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/17_20250625_121144_0016.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/17_20250625_121144_0016.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/18_20250625_121144_0017.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/18_20250625_121144_0017.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/1_20250625_121143_0000.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/1_20250625_121143_0000.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/2_20250625_121143_0001.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/2_20250625_121143_0001.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/3_20250625_121143_0002.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/3_20250625_121143_0002.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/5_20250625_121143_0004.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/5_20250625_121143_0004.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/6_20250625_121143_0005.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/6_20250625_121143_0005.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/7_20250625_121143_0006.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/7_20250625_121143_0006.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/8_20250625_121143_0007.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/8_20250625_121143_0007.png" target="_blank">Order via WhatsApp</a></div>
-      <div class="product-card"><img src="images/lingerie/9_20250625_121143_0008.png" alt="Lingerie"><a class="whatsapp-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/9_20250625_121143_0008.png" target="_blank">Order via WhatsApp</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="bags.html">Bags</a>
+    <a href="corset.html">Corset</a>
+    <a href="dresses.html">Dresses</a>
+    <a href="fabrics.html">Fabrics</a>
+    <a href="lingerie.html">Lingerie</a>
+    <a href="perfumes.html">Perfumes</a>
+    <a href="sash.html">Sash</a>
+    <a href="shoes.html">Shoes</a>
+    <a href="slippers.html">Slippers</a>
+    <a href="sneakers.html">Sneakers</a>
+  </nav>
+
+  <section class="product-grid">
+    <!-- Replace these with your real lingerie images -->
+    <div class="product-item">
+      <img src="images/lingerie/1_20250625_121143_0000.png" alt="Lingerie" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/1_20250625_121143_0000.png" target="_blank">Order via WhatsApp</a>
     </div>
-  </main>
 
-  <footer class="footer">
-    <p>Contact us: 
-      <a href="https://wa.me/233268381521" target="_blank">WhatsApp</a> | 
-      <a href="https://www.instagram.com/thedresscode_bymarian?igsh=MWJraGlzNjZzM3hlcw==" target="_blank">Instagram</a>
-    </p>
-    <p>&copy; 2025 The DressCode. All rights reserved.</p>
-  </footer>
+    <!-- Repeat for each image -->
+    <div class="product-item">
+      <img src="images/lingerie/2_20250625_121143_0001.png" alt="Lingerie" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/2_20250625_121143_0001.png" target="_blank">Order via WhatsApp</a>
+    </div>
 
-  <button id="scrollToTopBtn" title="Go to top">⬆</button>
-  <script src="script.js"></script>
+    <!-- Add all other lingerie images in the same format -->
+    <!-- You can duplicate the div and change the image filename accordingly -->
+
+  </section>
+
+  <button onclick="scrollToTop()" class="scroll-top" id="scrollBtn">↑</button>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollBtn");
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
 </body>
 </html>
