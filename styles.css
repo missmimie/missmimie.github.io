@@ -324,3 +324,73 @@ footer {
         font-size: 1.5rem;
     }
 }
+/* ====== PRODUCT PAGES EXTENSIONS ====== */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button {
+    margin: 10px 0 15px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe57;
+}
+
+/* Scroll to top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 20px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top.show {
+    display: block;
+}
