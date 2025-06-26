@@ -394,3 +394,18 @@ footer {
 .scroll-to-top.show {
     display: block;
 }
+/* Fix image zoom-out and layout */
+.product-item img {
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Responsive Grid Fix: Show 2 columns on mobile */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
