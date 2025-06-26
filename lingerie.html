@@ -2,12 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lingerie | The DressCode</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-overlay:after {
+      content: "×";
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" onclick="this.classList.remove('active')">
+    <img id="lightbox-image" src="" alt="Lingerie Enlarged" />
+  </div>
 
   <!-- Header -->
   <header>
@@ -15,7 +55,21 @@
       <div class="logo">The DressCode</div>
       <ul class="nav-links">
         <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#products">Products</a></li>
+        <li>
+          <a href="index.html#products">Products</a>
+          <ul class="sub-menu">
+            <li><a href="bags.html">Bags</a></li>
+            <li><a href="corsets.html">Corsets</a></li>
+            <li><a href="dresses.html">Dresses</a></li>
+            <li><a href="fabrics.html">Fabrics</a></li>
+            <li><a href="lingerie.html">Lingerie</a></li>
+            <li><a href="perfumes.html">Perfumes</a></li>
+            <li><a href="sash.html">Sash</a></li>
+            <li><a href="shoes.html">Shoes</a></li>
+            <li><a href="slippers.html">Slippers</a></li>
+            <li><a href="sneakers.html">Sneakers</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
@@ -27,44 +81,122 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" style="height: 60vh;">
+  <!-- Hero Section -->
+  <section class="hero" style="height: 60vh; background: linear-gradient(135deg, #ffe0ec, #ffbad2); color: #2c3e50;">
     <div class="hero-content">
       <h1>Lingerie Collection</h1>
-      <p>Comfortable and elegant intimate wear collection</p>
+      <p>Elegant comfort and confident style — feel beautiful from within</p>
     </div>
   </section>
 
   <!-- Product Grid -->
   <section class="product-grid">
-    <div class="product-item"><img src="images/lingerie/1_20250625_121143_0000.png" alt="Lingerie 1"><h3>Lingerie 1</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%201" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/2_20250625_121143_0001.png" alt="Lingerie 2"><h3>Lingerie 2</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%202" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/3_20250625_121143_0002.png" alt="Lingerie 3"><h3>Lingerie 3</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%203" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/5_20250625_121143_0004.png" alt="Lingerie 4"><h3>Lingerie 4</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%204" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/6_20250625_121143_0005.png" alt="Lingerie 5"><h3>Lingerie 5</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%205" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/7_20250625_121143_0006.png" alt="Lingerie 6"><h3>Lingerie 6</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%206" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/8_20250625_121143_0007.png" alt="Lingerie 7"><h3>Lingerie 7</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%207" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/9_20250625_121143_0008.png" alt="Lingerie 8"><h3>Lingerie 8</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%208" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/10_20250625_121143_0009.png" alt="Lingerie 9"><h3>Lingerie 9</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%209" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/11_20250625_121143_0010.png" alt="Lingerie 10"><h3>Lingerie 10</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2010" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/12_20250625_121143_0011.png" alt="Lingerie 11"><h3>Lingerie 11</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2011" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/13_20250625_121143_0012.png" alt="Lingerie 12"><h3>Lingerie 12</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2012" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/14_20250625_121143_0013.png" alt="Lingerie 13"><h3>Lingerie 13</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2013" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/15_20250625_121144_0014.png" alt="Lingerie 14"><h3>Lingerie 14</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2014" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/16_20250625_121144_0015.png" alt="Lingerie 15"><h3>Lingerie 15</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2015" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/17_20250625_121144_0016.png" alt="Lingerie 16"><h3>Lingerie 16</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2016" target="_blank">Order via WhatsApp</a></div>
-    <div class="product-item"><img src="images/lingerie/18_20250625_121144_0017.png" alt="Lingerie 17"><h3>Lingerie 17</h3><a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20Lingerie%2017" target="_blank">Order via WhatsApp</a></div>
+    <div class="product-item">
+      <img src="images/lingerie/1_20250625_121143_0000.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/1_20250625_121143_0000.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/2_20250625_121143_0001.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/2_20250625_121143_0001.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/3_20250625_121143_0002.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/3_20250625_121143_0002.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/5_20250625_121143_0004.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/5_20250625_121143_0004.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/6_20250625_121143_0005.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/6_20250625_121143_0005.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/7_20250625_121143_0006.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/7_20250625_121143_0006.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/8_20250625_121143_0007.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/8_20250625_121143_0007.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/9_20250625_121143_0008.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/9_20250625_121143_0008.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/10_20250625_121143_0009.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/10_20250625_121143_0009.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/11_20250625_121143_0010.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/11_20250625_121143_0010.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/12_20250625_121143_0011.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/12_20250625_121143_0011.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/13_20250625_121143_0012.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/13_20250625_121143_0012.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/14_20250625_121143_0013.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/14_20250625_121143_0013.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/15_20250625_121144_0014.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/15_20250625_121144_0014.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/16_20250625_121144_0015.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/16_20250625_121144_0015.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/17_20250625_121144_0016.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/17_20250625_121144_0016.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
+    <div class="product-item">
+      <img src="images/lingerie/18_20250625_121144_0017.png" alt="Lingerie" onclick="showLightbox(this.src)" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20lingerie:%20https://missmimie.github.io/images/lingerie/18_20250625_121144_0017.png" target="_blank">Order via WhatsApp</a>
+    </div>
+
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 The DressCode. All rights reserved. | Crafted with ❤️ for fashion lovers</p>
+    <p>&copy; 2025 The DressCode. All rights reserved. | <a href="sitemap.html" style="color:#e74c3c;">Sitemap</a></p>
   </footer>
 
-  <!-- Scroll to Top -->
+  <!-- Scroll to Top Button -->
   <div class="scroll-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">
     <i class="fas fa-chevron-up"></i>
   </div>
+
+  <!-- Lightbox Script -->
+  <script>
+    function showLightbox(src) {
+      const overlay = document.querySelector('.lightbox-overlay');
+      const image = document.getElementById('lightbox-image');
+      image.src = src;
+      overlay.classList.add('active');
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
