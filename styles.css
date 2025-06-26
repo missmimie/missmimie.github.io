@@ -31,10 +31,19 @@ nav {
     padding: 0 2rem;
 }
 
+/* ✅ Updated logo block */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 2rem;
     font-weight: bold;
     color: #e74c3c;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -309,6 +318,11 @@ footer {
     .products-grid {
         grid-template-columns: 1fr;
     }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -359,7 +373,7 @@ footer {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Smaller WhatsApp button */
+/* WhatsApp Button */
 .whatsapp-button {
     margin: 10px 0;
     background-color: #25d366;
@@ -396,14 +410,6 @@ footer {
 
 .scroll-to-top.show {
     display: block;
-}
-
-/* Responsive Grid Fix: Show 2 columns on mobile */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
 }
 
 /* Dropdown menu */
