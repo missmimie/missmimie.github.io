@@ -1,122 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bags - The DressCode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bags | The DressCode</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
   <style>
     body {
-      background-color: #fef6f0;
-      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff7f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-    }
+      color: #333;
+    }header {
+  background-color: #fce8dc;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-    header {
-      background-color: #d8b4a0;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-    }
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #9a342d;
+}
 
-    header h1 {
-      font-size: 1.5rem;
-      margin: 0;
-    }
+nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #9a342d;
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-    nav a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-    }
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #7a241e;
+}
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
 
-    .product-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.product {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
 
-    .product-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-    .order-btn {
-      margin-top: 0.5rem;
-      background-color: #d8b4a0;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
+.product a {
+  background-color: #9a342d;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    .order-btn:hover {
-      background-color: #c49a8f;
-    }
+.product a:hover {
+  background-color: #7a241e;
+}
 
-    .scroll-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #d8b4a0;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-    }
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #fce8dc;
+  margin-top: 2rem;
+}
 
-    .scroll-to-top.show {
-      display: block;
-    }
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #9a342d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
   </style>
-</head>
-<body>
-
+</head><body>
   <header>
     <h1>The DressCode</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="bags.html">Bags</a>
-      <a href="dresses.html">Dresses</a>
-      <a href="corset.html">Corsets</a>
-      <a href="lingerie.html">Lingerie</a>
       <a href="perfumes.html">Perfumes</a>
+      <a href="bags.html" class="active">Bags</a>
+      <a href="corset.html">Corsets</a>
+      <a href="dresses.html">Dresses</a>
+      <a href="fabrics.html">Fabrics</a>
+      <a href="lingerie.html">Lingerie</a>
+      <a href="sash.html">Sashes</a>
       <a href="shoes.html">Shoes</a>
       <a href="slippers.html">Slippers</a>
       <a href="sneakers.html">Sneakers</a>
-      <a href="fabrics.html">Fabrics</a>
     </nav>
-  </header>
-
-  <section class="product-grid">
-    <!-- Bag Images & Order Buttons -->
-    <!-- Repeat for all 18 bag images -->
-    <!-- Sample Card -->
+  </header>  <main class="grid">
+    <!-- BAG IMAGES -->
     <script>
-      const bagImages = [
+      const images = [
         "10_20250625_133302_0009.png",
         "12_20250625_133302_0011.png",
         "16_20250625_133303_0015.png",
@@ -135,37 +139,25 @@
         "6_20250625_133302_0005.png",
         "7_20250625_133302_0006.png",
         "8_20250625_133302_0007.png"
-      ];
+      ];images.forEach((img) => {
+    document.write(`
+      <div class="product">
+        <img src="images/bags/${img}" alt="Bag" />
+        <a href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/${img}" target="_blank">Order via WhatsApp</a>
+      </div>
+    `);
+  });
+</script>
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const container = document.querySelector(".product-grid");
-        bagImages.forEach((img) => {
-          const card = document.createElement("div");
-          card.className = "product-card";
-          card.innerHTML = `
-            <img src="images/bags/${img}" alt="Bag product">
-            <a class="order-btn" href="https://wa.me/233XXXXXXXXX?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/${img}" target="_blank">Order via WhatsApp</a>
-          `;
-          container.appendChild(card);
-        });
-      });
-    </script>
-  </section>
+  </main><button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
 
-  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
-
-  <script>
-    // Scroll to top button logic
-    const scrollBtn = document.querySelector(".scroll-to-top");
+  <footer>
+    <p>&copy; 2025 The DressCode. All rights reserved.</p>
+    <p>Follow us on <a href="https://www.instagram.com/thedresscode_bymarian" target="_blank">Instagram</a></p>
+  </footer>  <script>
+    // Scroll-to-top button toggle
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) scrollBtn.classList.add("show");
-      else scrollBtn.classList.remove("show");
+      document.querySelector(".scroll-top").style.display =
+        window.scrollY > 100 ? "block" : "none";
     });
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  </script>
-
-</body>
-</html>
+  </script></body></html>
