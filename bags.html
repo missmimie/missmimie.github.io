@@ -1,160 +1,76 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bags | The DressCode</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #333;
-    }header {
-  background-color: #00695c; /* Unique color for Bags */
-  padding: 1rem;
-  text-align: center;
-  color: white;
-}
-
-nav {
-  background-color: #00796b;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  background-color: #48a999;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-
-nav a:hover {
-  background-color: #004d40;
-}
-
-h2 {
-  text-align: center;
-  margin-top: 2rem;
-  color: #00695c;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.product img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.order-btn {
-  background-color: #00695c;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.order-btn:hover {
-  background-color: #004d40;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #eee;
-  margin-top: 3rem;
-}
-
-#topBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  background: #00695c;
-  color: white;
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-#topBtn:hover {
-  background: #004d40;
-}
-
-  </style>
-</head>
-<body>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+</head><body>
   <header>
-    <h1>The DressCode</h1>
-    <p>Bags</p>
-  </header>  <nav>
-    <a href="index.html">Home</a>
-    <a href="perfumes.html">Perfumes</a>
-    <a href="dresses.html">Dresses</a>
-    <a href="bags.html">Bags</a>
-    <a href="corset.html">Corsets</a>
-    <a href="lingerie.html">Lingerie</a>
-    <a href="footwear.html">Footwear</a>
-  </nav>  <h2>Chic Bags</h2>
-  <div class="product-grid">
-    <!-- Bags Images -->
-    <script>
-      const bagImages = [
-        "IMG-20250528-WA0150.jpg", "IMG-20250529-WA0139.jpg", "IMG-20250609-WA0081.jpg",
-        "IMG-20250609-WA0091.jpg", "IMG-20250609-WA0092.jpg", "IMG-20250612-WA0102.jpg",
-        "IMG-20250613-WA0076.jpg", "IMG-20250613-WA0079.jpg", "IMG-20250614-WA0009.jpg",
-        "Screenshot_20250529_122200_Instagram.jpg"
-      ];
-      document.write(
-        bagImages.map(name => `
-          <div class="product">
-            <img src="images/bags/${name}" alt="Bag">
-            <a class="order-btn" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/${name}" target="_blank">Order via WhatsApp</a>
-          </div>
-        `).join('')
-      );
-    </script>
-  </div>  <footer>
-    &copy; 2025 The DressCode. All rights reserved.
-  </footer><button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="The DressCode Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="perfumes.html">Perfumes</a></li>
+        <li><a href="dresses.html">Dresses</a></li>
+        <li><a href="bags.html" class="active">Bags</a></li>
+        <li><a href="corset.html">Corsets</a></li>
+        <li><a href="lingerie.html">Lingerie</a></li>
+        <li><a href="shoes.html">Shoes</a></li>
+        <li><a href="slippers.html">Slippers</a></li>
+        <li><a href="sneakers.html">Sneakers</a></li>
+        <li><a href="fabrics.html">Fabrics</a></li>
+        <li><a href="sash.html">Sash</a></li>
+      </ul>
+    </nav>
+  </header>  <main>
+    <section class="category-section bags">
+      <h1>Bags</h1>
+      <div class="product-grid">
+        <!-- Product cards -->
+        <script>
+          const images = [
+            "10_20250625_133302_0009.png",
+            "12_20250625_133302_0011.png",
+            "16_20250625_133303_0015.png",
+            "24_20250625_133303_0023.png",
+            "25_20250625_133303_0024.png",
+            "29_20250625_133303_0028.png",
+            "30_20250625_133304_0029.png",
+            "31_20250625_133304_0030.png",
+            "32_20250625_133304_0031.png",
+            "36_20250625_133304_0035.png",
+            "37_20250625_133304_0036.png",
+            "46_20250625_133305_0045.png",
+            "48_20250625_133306_0047.png",
+            "50_20250625_133306_0049.png",
+            "5_20250625_133302_0004.png",
+            "6_20250625_133302_0005.png",
+            "7_20250625_133302_0006.png",
+            "8_20250625_133302_0007.png"
+          ];
+          const grid = document.write('<div class="product-grid">');
+          images.forEach(img => {
+            document.write(`
+              <div class="product-card">
+                <img src="images/bags/${img}" alt="Bag" />
+                <a class="order-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this bag from The DressCode: https://missmimie.github.io/images/bags/${img}" target="_blank">Order via WhatsApp</a>
+              </div>
+            `);
+          });
+          document.write('</div>');
+        </script>
+      </div>
+    </section>
+  </main>  <footer>
+    <div class="footer">
+      <p>Connect with us:</p>
+      <a href="https://wa.me/233268381521" target="_blank">WhatsApp</a> |
+      <a href="https://www.instagram.com/thedresscode_bymarian" target="_blank">Instagram</a>
+      <p>&copy; 2025 The DressCode. All rights reserved.</p>
+    </div>
+  </footer><button onclick="scrollToTop()" class="scroll-top">⬆️</button>
 
-  <script>
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = function () {
-      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script></body>
-</html>
+  <script src="script.js"></script></body></html>
