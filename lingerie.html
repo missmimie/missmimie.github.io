@@ -23,11 +23,11 @@
 
     nav {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      background-color: #ffe4ed;
+      justify-content: center;
       gap: 10px;
       padding: 1rem;
+      background-color: #ffe4ed;
     }
 
     nav a {
@@ -48,35 +48,35 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
       padding: 20px;
+    }
+
+    .product-item {
+      background-color: #fff0f5;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(255, 128, 171, 0.2);
     }
 
     .product-item img {
       width: 100%;
       height: auto;
       object-fit: contain;
-      border-radius: 10px;
-      background: white;
-    }
-
-    .product-item {
-      background-color: #fff0f5;
-      padding: 10px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 128, 171, 0.2);
+      border-radius: 8px;
     }
 
     .whatsapp-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
+      display: block;
+      margin-top: 8px;
       background-color: #25D366;
       color: white;
+      padding: 8px;
+      text-align: center;
       text-decoration: none;
-      border-radius: 20px;
-      font-size: 0.9rem;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
     .scroll-top {
@@ -115,21 +115,24 @@
   </nav>
 
   <section class="product-grid">
-    <!-- Replace these with your real lingerie images -->
+    <!-- Add all lingerie images -->
+    <!-- Sample below, repeat for all 17 images -->
     <div class="product-item">
       <img src="images/lingerie/1_20250625_121143_0000.png" alt="Lingerie" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/1_20250625_121143_0000.png" target="_blank">Order via WhatsApp</a>
     </div>
 
-    <!-- Repeat for each image -->
     <div class="product-item">
       <img src="images/lingerie/2_20250625_121143_0001.png" alt="Lingerie" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/2_20250625_121143_0001.png" target="_blank">Order via WhatsApp</a>
     </div>
 
-    <!-- Add all other lingerie images in the same format -->
-    <!-- You can duplicate the div and change the image filename accordingly -->
+    <div class="product-item">
+      <img src="images/lingerie/3_20250625_121143_0002.png" alt="Lingerie" />
+      <a class="whatsapp-button" href="https://wa.me/233268381521?text=Hi! I'm interested in this lingerie: https://missmimie.github.io/images/lingerie/3_20250625_121143_0002.png" target="_blank">Order via WhatsApp</a>
+    </div>
 
+    <!-- Repeat for all remaining lingerie images in the same pattern -->
   </section>
 
   <button onclick="scrollToTop()" class="scroll-top" id="scrollBtn">↑</button>
