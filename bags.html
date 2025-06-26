@@ -6,8 +6,50 @@
   <title>Bags | The DressCode</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Lightbox popup styles */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      display: none;
+    }
+
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-overlay:after {
+      content: "×";
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Lightbox container -->
+  <div class="lightbox-overlay" onclick="this.classList.remove('active')">
+    <img id="lightbox-image" src="" alt="Enlarged product" />
+  </div>
 
   <!-- Header -->
   <header>
@@ -51,88 +93,88 @@
 
   <!-- Product Grid -->
   <section class="product-grid">
-
     <div class="product-item">
-      <img src="images/bags/5_20250625_133302_0004.png" alt="Bag" />
+      <img src="images/bags/5_20250625_133302_0004.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/5_20250625_133302_0004.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/6_20250625_133302_0005.png" alt="Bag" />
+      <img src="images/bags/6_20250625_133302_0005.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/6_20250625_133302_0005.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/7_20250625_133302_0006.png" alt="Bag" />
+      <img src="images/bags/7_20250625_133302_0006.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/7_20250625_133302_0006.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/8_20250625_133302_0007.png" alt="Bag" />
+      <img src="images/bags/8_20250625_133302_0007.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/8_20250625_133302_0007.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/10_20250625_133302_0009.png" alt="Bag" />
+      <img src="images/bags/10_20250625_133302_0009.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/10_20250625_133302_0009.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/12_20250625_133302_0011.png" alt="Bag" />
+      <img src="images/bags/12_20250625_133302_0011.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/12_20250625_133302_0011.png" target="_blank">Order via WhatsApp</a>
     </div>
+
     <div class="product-item">
-      <img src="images/bags/16_20250625_133303_0015.png" alt="Bag" />
+      <img src="images/bags/16_20250625_133303_0015.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/16_20250625_133303_0015.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/24_20250625_133303_0023.png" alt="Bag" />
+      <img src="images/bags/24_20250625_133303_0023.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/24_20250625_133303_0023.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/25_20250625_133303_0024.png" alt="Bag" />
+      <img src="images/bags/25_20250625_133303_0024.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/25_20250625_133303_0024.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/29_20250625_133303_0028.png" alt="Bag" />
+      <img src="images/bags/29_20250625_133303_0028.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/29_20250625_133303_0028.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/30_20250625_133304_0029.png" alt="Bag" />
+      <img src="images/bags/30_20250625_133304_0029.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/30_20250625_133304_0029.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/31_20250625_133304_0030.png" alt="Bag" />
+      <img src="images/bags/31_20250625_133304_0030.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/31_20250625_133304_0030.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/32_20250625_133304_0031.png" alt="Bag" />
+      <img src="images/bags/32_20250625_133304_0031.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/32_20250625_133304_0031.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/36_20250625_133304_0035.png" alt="Bag" />
+      <img src="images/bags/36_20250625_133304_0035.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/36_20250625_133304_0035.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/37_20250625_133304_0036.png" alt="Bag" />
+      <img src="images/bags/37_20250625_133304_0036.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/37_20250625_133304_0036.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/46_20250625_133305_0045.png" alt="Bag" />
+      <img src="images/bags/46_20250625_133305_0045.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/46_20250625_133305_0045.png" target="_blank">Order via WhatsApp</a>
     </div>
 
     <div class="product-item">
-      <img src="images/bags/48_20250625_133306_0047.png" alt="Bag" />
+      <img src="images/bags/48_20250625_133306_0047.png" alt="Bag" onclick="showLightbox(this.src)" />
       <a class="whatsapp-button" href="https://wa.me/233268381521?text=I'm%20interested%20in%20this%20bag:%20https://missmimie.github.io/images/bags/48_20250625_133306_0047.png" target="_blank">Order via WhatsApp</a>
     </div>
 
@@ -147,6 +189,16 @@
   <div class="scroll-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">
     <i class="fas fa-chevron-up"></i>
   </div>
+
+  <!-- Lightbox script -->
+  <script>
+    function showLightbox(src) {
+      const overlay = document.querySelector('.lightbox-overlay');
+      const image = document.getElementById('lightbox-image');
+      image.src = src;
+      overlay.classList.add('active');
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
