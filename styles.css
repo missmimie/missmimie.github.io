@@ -443,3 +443,22 @@ footer {
 .sub-menu a:hover {
   color: #e74c3c;
 }
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top.show {
+  display: block;
+}
